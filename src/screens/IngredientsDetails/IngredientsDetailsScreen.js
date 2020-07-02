@@ -4,17 +4,20 @@ import {
   Text,
   View,
   Image,
-  TouchableHighlight
+  TouchableHighlight,
+  ImageBackground
 } from 'react-native';
 import styles from './styles';
 import {
   getIngredientName,
   getAllIngredients,
 } from '../../data/MockDataAPI';
+import CustomHeader from '../../components/CustomHeader/CustomHeader';
 
 export default class IngredientsDetailsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
+      headerShown: false,
       title: navigation.getParam('title'),
       headerTitleStyle: {
         fontSize: 16
@@ -50,6 +53,16 @@ export default class IngredientsDetailsScreen extends React.Component {
 
     return (
       <View>
+         <CustomHeader  
+              parent_title_name={'Все рецепты слаймов'} 
+              parent_navigation={this.props.navigation} 
+        />
+        <ImageBackground
+          style={{
+            resizeMode: 'cover'
+          }}
+          source={require('../../../assets/ScreenBackgroundImages/background-image-6.png')}
+        >
         <FlatList
           vertical
           showsVerticalScrollIndicator={false}
@@ -58,6 +71,7 @@ export default class IngredientsDetailsScreen extends React.Component {
           renderItem={this.renderIngredient}
           keyExtractor={item => `${item.recipeId}`}
         />
+        </ImageBackground>
       </View>
     );
   }

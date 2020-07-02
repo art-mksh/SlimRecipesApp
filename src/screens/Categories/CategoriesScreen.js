@@ -155,6 +155,8 @@ export default class CategoriesScreen extends React.Component {
         />
         <View> 
             <FlatList
+              vertical
+              showsVerticalScrollIndicator={false}
               data={categories}
               renderItem={this.renderCategory}
               keyExtractor={item => `${item.id}`}
