@@ -174,13 +174,6 @@ export default class RecipeScreen extends React.Component {
 
 
             <Text style={styles.infoRecipeName}>{item.title}</Text>
-            <View style={styles.infoContainer}>
-              <TouchableHighlight
-                onPress={() => navigation.navigate('RecipesList', { category, title })}
-              >
-                <Text style={styles.category}>{getCategoryName(item.categoryId).toUpperCase()}</Text>
-              </TouchableHighlight>
-            </View>
 
             <View style={styles.infoContainer}>
               <ViewIngredientsButton

@@ -57,7 +57,7 @@ export default class CategoriesScreen extends React.Component {
 
   constructor(props) {
     super(props);
-    this.PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
+    this.PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg-4.png');
     this.BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
 
   }

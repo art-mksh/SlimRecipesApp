@@ -10,7 +10,7 @@ import BackButton from '../../components/BackButton/BackButton';
 export default class CustomHeader extends React.Component {
   render() {
     //console.log(this.props.scene.descriptor.options.title);
-    
+
     /*
     return (
       <View style={{ height: 100, justifyContent: 'flex-end', padding: 10, backgroundColor: 'transparent' }}>
@@ -58,15 +58,15 @@ export default class CustomHeader extends React.Component {
     //console.log(this.props.parent_navigation.getScreenProps);
     console.log(this.props.parent_navigation.state.routeName);
 
-    let LeftCustomComponent, RightCustomComponent,CenterCustomComponent;
+    let LeftCustomComponent, RightCustomComponent, CenterCustomComponent;
 
     if (
-          this.props.parent_navigation.state.routeName === 'RecipesList' 
-          || 
-          this.props.parent_navigation.state.routeName === 'IngredientsDetails' 
-          || 
-          this.props.parent_navigation.state.routeName === 'Ingredient'
-        ) {
+      this.props.parent_navigation.state.routeName === 'RecipesList'
+      ||
+      this.props.parent_navigation.state.routeName === 'IngredientsDetails'
+      ||
+      this.props.parent_navigation.state.routeName === 'Ingredient'
+    ) {
       LeftCustomComponent = <BackButton
         onPress={() => {
           this.props.parent_navigation.goBack();
@@ -127,7 +127,7 @@ export default class CustomHeader extends React.Component {
             },
             shadowRadius: 3
           }}>{this.props.parent_title_name}</Text>}
-          rightComponent={<View></View>}
+          rightComponent={<View></View>} 
         />
       </View>
     );

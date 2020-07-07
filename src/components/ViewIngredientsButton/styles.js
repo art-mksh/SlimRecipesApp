@@ -10,16 +10,17 @@ const styles = StyleSheet.create({
     marginRight: 10,
     borderRadius: 100,
     //borderColor: '#2cd18a',
-    borderColor: '#48c3ff',
+    borderColor: 'grey',
     borderWidth: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    // backgroundColor: '#2cd18a'
+     backgroundColor: '#ff5ec7'
   },
   text: {
-    fontSize: 14,
+    fontSize: 16,
+    fontWeight:"bold",
     //color: '#2cd18a'
-    color: '#48c3ff'
+    color: 'white'
   }
 });
 
