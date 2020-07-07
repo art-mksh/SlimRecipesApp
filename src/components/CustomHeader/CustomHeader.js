@@ -56,7 +56,7 @@ export default class CustomHeader extends React.Component {
 
     //console.log(this.props);
     //console.log(this.props.parent_navigation.getScreenProps);
-    console.log(this.props.parent_navigation.state.routeName);
+    //console.log(this.props.parent_navigation.state.routeName);
 
     let LeftCustomComponent, RightCustomComponent, CenterCustomComponent;
 

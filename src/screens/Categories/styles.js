@@ -1,6 +1,9 @@
 import { StyleSheet } from 'react-native';
 import { Main } from '../../AppStyles';
 
+
+
+
 const styles = StyleSheet.create({
   categoriesItemContainer: {
     flex: 1,
@@ -33,41 +36,46 @@ const styles = StyleSheet.create({
   categoriesName: {
     flex: 1,
     fontSize: 30,
-    fontWeight: 'bold',
+    //fontWeight: 'bold',
     textAlign: 'center',
     //color: '#333333',
     color: 'white',
     marginTop: 8,
     textShadowColor: 'black',
     textShadowOffset: { width: 2, height: 2 },
-    textShadowRadius: 1
+    textShadowRadius: 1,
+    fontFamily:'GUERRILLA-Normal'
   },
   categoriesPinkPrefixName: {
     flex: 1,
     fontSize: 32,
-    fontWeight: 'bold',
+    //fontWeight: 'bold',
     textAlign: 'center',
     color: '#ff4ebd',
     marginTop: 5,
     textShadowColor: 'black',
     textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 1
+    textShadowRadius: 1,
+    fontFamily:'GUERRILLA-Normal'
   },
   categoriesBluePrefixName: {
     flex: 1,
     fontSize: 32,
-    fontWeight: 'bold',
+    //fontWeight: 'bold',
     textAlign: 'center',
     color: '#0189d7',
     marginTop: 5,
     textShadowColor: 'black',
     textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 1
+    textShadowRadius: 1,
+    fontFamily:'GUERRILLA-Normal'
+
   },
   categoriesInfo: {
     marginTop: 3,
     marginBottom: 5,
     fontSize: 15,
+    fontFamily:'GUERRILLA-Normal'
     //textShadowColor: 'white',
     //textShadowOffset: {width:2,height:2},
     // textShadowRadius:2

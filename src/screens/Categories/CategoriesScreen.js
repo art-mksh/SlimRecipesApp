@@ -39,7 +39,7 @@ export default class CategoriesScreen extends React.Component {
       elevation: 0,
       //backgroundColor: '#000',
       //backgroundColor: 'rgba(52, 52, 52, 0.8)',
-      opacity: 1
+      opacity: 1,
     },
     
 
@@ -57,7 +57,7 @@ export default class CategoriesScreen extends React.Component {
 
   constructor(props) {
     super(props);
-    this.PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg-4.png');
+    this.PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
     this.BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
 
   }
