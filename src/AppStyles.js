@@ -44,7 +44,7 @@ const RecipeCard = StyleSheet.create({
     */
     flex: 1,
     fontSize: 27,
-    fontWeight: 'bold',
+    //fontWeight: 'bold',
     textAlign: 'center',
     color: 'white',
     marginTop: 3,
@@ -54,6 +54,8 @@ const RecipeCard = StyleSheet.create({
     textShadowColor: 'black',
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 5,
+    fontFamily:'GUERRILLA-Normal'
+
   },
   category: {
     marginTop: 5,

@@ -21,6 +21,7 @@ const { width: viewportWidth } = Dimensions.get('window');
 export default class RecipeScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
+      headerShown: false,
       headerTransparent: 'true',
       headerLeft: () => <BackButton
         onPress={() => {

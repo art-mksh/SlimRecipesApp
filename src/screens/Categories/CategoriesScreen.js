@@ -67,20 +67,7 @@ export default class CategoriesScreen extends React.Component {
     const category = item;
     this.props.navigation.navigate('RecipesList', { category, title });
   };
-  /*
-  renderCategory = ({ item }) => (
-    <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={() => this.onPressCategory(item)}>
-      <View style={styles.categoriesItemContainer}>
-        <Image style={styles.categoriesPhoto} source={{ uri: item.photo_url }} />
-        <Text style={styles.categoriesName}>{item.name}</Text>
-        <Text style={styles.categoriesInfo}>{getNumberOfRecipes(item.id)} recipes</Text>
-      </View>
-    </TouchableHighlight>
-  );
-  */
 
-  //static PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
-  //static BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
 
   renderCategory = ({ item, index }) => (
     <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={() => this.onPressCategory(item)}>
@@ -91,8 +78,8 @@ export default class CategoriesScreen extends React.Component {
           flex: 1,
           resizeMode: 'cover', // or 'stretch'
           marginTop: 20,
-          marginLeft:25,
-          marginRight:25,
+          marginLeft:30,
+          marginRight:30,
           //height: 50,
           //width: 170,
           textShadowColor: 'black',
@@ -112,32 +99,9 @@ export default class CategoriesScreen extends React.Component {
     </TouchableHighlight>
   );
 
-/*
+
   render() {
 
-    return (
-
-      <View style={{ flex: 1 }} >
-        <ImageBackground style={{
-          flex: 1,
-          resizeMode: 'cover'
-        }} 
-        source={require('../../../assets/ScreenBackgroundImages/Categories/background-image.png')}
-        >
-          <FlatList
-            data={categories}
-            renderItem={this.renderCategory}
-            keyExtractor={item => `${item.id}`}
-            style={{ paddingTop: 100 }}
-          />
-        </ImageBackground>
-      </View>
-    );
-  };
-  */
-  render() {
-
-    //console.log(this.props);
 
     return (
 

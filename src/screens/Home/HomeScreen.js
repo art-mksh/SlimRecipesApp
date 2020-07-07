@@ -46,6 +46,8 @@ export default class HomeScreen extends React.Component {
 
   constructor(props) {
     super(props);
+    this.PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
+    this.BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
   }
 
   onPressRecipe = item => {
@@ -64,15 +66,15 @@ export default class HomeScreen extends React.Component {
   );
   */
 
-  renderRecipes = ({ item }) => (
+  renderRecipes = ({ item, index }) => (
     <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={() => this.onPressRecipe(item)}>
         <ImageBackground
         style={{
           flex: 1,
           resizeMode: 'cover', // or 'stretch'
           marginTop: 20,
-          marginLeft:25,
-          marginRight:25,
+          marginLeft:30,
+          marginRight:30,
           //height: 50,
           //width: 170,
           textShadowColor: 'black',
@@ -81,9 +83,11 @@ export default class HomeScreen extends React.Component {
           shadowOpacity:0.4,
           elevation: 5,
         }}
+        source={(index % 2 == 0?this.PinkButtonBgImage:this.BlueButtonBgImage)}
+
       >
-      <View style={styles.container}>
-        <Text style={styles.title}>{item.title}</Text>
+      <View style={styles.categoriesItemContainer}>
+        <Text style={styles.categoriesName}>{item.title}</Text>
       </View>
       </ImageBackground>
     </TouchableHighlight>
@@ -111,6 +115,7 @@ export default class HomeScreen extends React.Component {
             data={recipes}
             renderItem={this.renderRecipes}
             keyExtractor={item => `${item.recipeId}`}
+
           />
         </View>  
         </ImageBackground>
