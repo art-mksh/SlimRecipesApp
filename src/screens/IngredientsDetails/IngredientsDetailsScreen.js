@@ -37,6 +37,7 @@ export default class IngredientsDetailsScreen extends React.Component {
   };
 
   renderIngredient = ({ item }) => (
+    
     <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={() => this.onPressIngredient(item[0])}>
       <View style={styles.container}>
         <Image style={styles.photo} source={{ uri: item[0].photo_url }} />
@@ -52,25 +53,30 @@ export default class IngredientsDetailsScreen extends React.Component {
     const ingredientsArray = getAllIngredients(item);
 
     return (
-      <View>
+      <View style={{ flex: 1 }}>
+
+<ImageBackground
+          style={{
+            resizeMode: 'cover',
+            height:'100%',
+            width:'100%'
+          }}
+          source={require('../../../assets/ScreenBackgroundImages/background-image-6.png')}
+        >
          <CustomHeader  
               parent_title_name={'Все рецепты слаймов'} 
               parent_navigation={this.props.navigation} 
         />
-        <ImageBackground
-          style={{
-            resizeMode: 'cover'
-          }}
-          source={require('../../../assets/ScreenBackgroundImages/background-image-6.png')}
-        >
-        <FlatList
-          vertical
-          showsVerticalScrollIndicator={false}
-          numColumns={3}
-          data={ingredientsArray}
-          renderItem={this.renderIngredient}
-          keyExtractor={item => `${item.recipeId}`}
-        />
+     
+          <FlatList
+            vertical
+            showsVerticalScrollIndicator={false}
+            numColumns={3}
+            data={ingredientsArray}
+            renderItem={this.renderIngredient}
+            keyExtractor={item => `${(item.ingredientId)}`}
+           //keyExtractor={item => (item.ingredientId*parseInt(Math.random()))}
+          />
         </ImageBackground>
       </View>
     );

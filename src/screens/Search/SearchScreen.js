@@ -4,7 +4,8 @@ import {
   Text,
   View,
   Image,
-  TouchableHighlight
+  TouchableHighlight,
+  ImageBackground,
 } from 'react-native';
 import styles from './styles';
 import { ListItem, SearchBar } from 'react-native-elements';
@@ -15,25 +16,30 @@ import {
   getRecipesByCategoryName,
   getRecipesByIngredientName
 } from '../../data/MockDataAPI';
+import CustomHeader from '../../components/CustomHeader/CustomHeader';
 
 export default class SearchScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
-    const { params = {} } = navigation.state;
+
+    //const { params = {} } = navigation.state;
+    const { params } = navigation.state;
+
     return {
-      headerRight: (
+      headerShown: false,
+      headerRight: () => (
         <MenuImage
           onPress={() => {
             navigation.openDrawer();
           }}
         />
       ),
-      headerTitle: (
+      headerTitle: () => (
         <SearchBar
           containerStyle={{
             backgroundColor: 'transparent',
             borderBottomColor: 'transparent',
             borderTopColor: 'transparent',
-            flex: 1
+            flex: 1,
           }}
           inputContainerStyle={{
             backgroundColor: '#EDEDED'
@@ -50,7 +56,8 @@ export default class SearchScreen extends React.Component {
           onChangeText={text => params.handleSearch(text)}
           //onClear={() => params.handleSearch('')}
           placeholder="Поиск рецептов"
-          value={params.data}
+          //value={params.data}
+          value={navigation.state.data}
         />
       ),
       headerStyle: styles.headerBar
@@ -111,16 +118,34 @@ export default class SearchScreen extends React.Component {
   );
 
   render() {
+
+    //console.log(this.props.navigation.state.params);
     return (
-      <View>
-        <FlatList
-          vertical
-          showsVerticalScrollIndicator={false}
-          numColumns={2}
-          data={this.state.data}
-          renderItem={this.renderRecipes}
-          keyExtractor={item => `${item.recipeId}`}
-        />
+      <View style={{ flex: 1 }}>
+        <ImageBackground 
+          style={{
+            flex: 1,
+            resizeMode: 'cover'
+            }} 
+            source={require('../../../assets/ScreenBackgroundImages/Categories/background-image.png' )}
+        >
+          <CustomHeader  
+                parent_title_name={'Как сделать лизуна'} 
+                parent_navigation={this.props.navigation} 
+                setSstate={this.setState}
+                //onChangeText={text => this.props.navigation.state.params.handleSearch(text)}
+          />
+          <FlatList
+            vertical
+            showsVerticalScrollIndicator={false}
+            numColumns={2}
+            data={this.state.data}
+            renderItem={this.renderRecipes}
+            keyExtractor={item => `${item.recipeId}`}
+            style={{ paddingTop: 50}}
+
+          />
+       </ImageBackground>
       </View>
     );
   }

@@ -74,21 +74,21 @@ export default class CategoriesScreen extends React.Component {
       <View>
         <Text style={(index % 2 == 0?styles.categoriesBluePrefixName:styles.categoriesPinkPrefixName)}>{index == 0 ? 'Выбери:' : 'или'}</Text>
         <ImageBackground
-        style={{
-          flex: 1,
-          resizeMode: 'cover', // or 'stretch'
-          marginTop: 20,
-          marginLeft:30,
-          marginRight:30,
-          //height: 50,
-          //width: 170,
-          textShadowColor: 'black',
-          textShadowOffset: { width: 1, height: 1 },
-          textShadowRadius: 5,
-          shadowOpacity:0.4,
-          elevation: 5,
-        }}
-        source={(index % 2 == 0?this.PinkButtonBgImage:this.BlueButtonBgImage)}
+          style={{
+            flex: 1,
+            resizeMode: 'cover', // or 'stretch'
+            marginTop: 20,
+            marginLeft:30,
+            marginRight:30,
+            //height: 50,
+            //width: 170,
+            textShadowColor: 'black',
+            textShadowOffset: { width: 1, height: 1 },
+            textShadowRadius: 5,
+            shadowOpacity:0.4,
+            elevation: 5,
+          }}
+          source={(index % 2 == 0?this.PinkButtonBgImage:this.BlueButtonBgImage)}
       >
         <View style={styles.categoriesItemContainer}>
           <Text style={styles.categoriesName}>{item.categories_screen_name}</Text>

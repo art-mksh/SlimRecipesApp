@@ -5,7 +5,8 @@ import {
   Text,
   View,
   Image,
-  TouchableHighlight
+  TouchableHighlight,
+  ImageBackground
 } from 'react-native';
 import styles from './styles';
 import {
@@ -13,10 +14,12 @@ import {
   getRecipesByIngredient,
   getCategoryName
 } from '../../data/MockDataAPI';
+import CustomHeader from '../../components/CustomHeader/CustomHeader';
 
 export default class IngredientScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
+      headerShown: false,
       title: navigation.getParam('name'),
       headerStyle: styles.headerBar
     };
@@ -34,9 +37,8 @@ export default class IngredientScreen extends React.Component {
     <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={() => this.onPressRecipe(item)}>
       <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={() => this.onPressRecipe(item)}>
         <View style={styles.container}>
-          <Image style={styles.photo} source={{ uri: item.photo_url }} />
+          {    console.log(item.recipeId)}
           <Text style={styles.title}>{item.title}</Text>
-          <Text style={styles.category}>{getCategoryName(item.categoryId)}</Text>
         </View>
       </TouchableHighlight>
     </TouchableHighlight>
@@ -47,23 +49,41 @@ export default class IngredientScreen extends React.Component {
     const ingredientId = navigation.getParam('ingredient');
     const ingredientUrl = getIngredientUrl(ingredientId);
     const ingredientName = navigation.getParam('name');
+
     return (
-      <ScrollView style={styles.mainContainer}>
-        <View style={{ borderBottomWidth: 0.4, marginBottom: 10, borderBottomColor: 'grey' }}>
-          <Image style={styles.photoIngredient} source={{ uri: '' + ingredientUrl }} />
+      <View style={{ flex: 1 }}>
+
+        <View style={{ flex: 1 }}>
+        <ImageBackground
+          style={{
+            resizeMode: 'cover',
+            height:'100%',
+            width:'100%'
+          }}
+          source={require('../../../assets/ScreenBackgroundImages/background-image-6.png')}
+        >
+         <CustomHeader  
+              parent_title_name={'Все рецепты слаймов'} 
+              parent_navigation={this.props.navigation} 
+        />
+          <View style={{ borderBottomWidth: 0.4, marginBottom: 10, borderBottomColor: 'grey' }}>
+                <Image style={styles.photoIngredient} source={{ uri: '' + ingredientUrl }} />
+              </View>
+              <Text style={styles.ingredientInfo}>Рецепты с {ingredientName}:</Text>
+              <View style={{ flex: 1}}>
+                <FlatList
+                  vertical
+                  showsVerticalScrollIndicator={false}
+                  numColumns={1}
+                  data={getRecipesByIngredient(ingredientId)}
+                  renderItem={this.renderRecipes}
+                  keyExtractor={item => `${(item.recipeId)}`}
+                  //keyExtractor={item => item.recipeId}
+                />
+              </View>
+              </ImageBackground>
         </View>
-        <Text style={styles.ingredientInfo}>Рецепты с {ingredientName}:</Text>
-        <View>
-          <FlatList
-            vertical
-            showsVerticalScrollIndicator={false}
-            numColumns={2}
-            data={getRecipesByIngredient(ingredientId)}
-            renderItem={this.renderRecipes}
-            keyExtractor={item => `${item.recipeId}`}
-          />
-        </View>
-      </ScrollView>
+      </View>
     );
   }
 }

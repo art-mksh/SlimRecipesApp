@@ -22,7 +22,11 @@ const styles = StyleSheet.create({
   photo: RecipeCard.photo,
   title: RecipeCard.title,
   category: RecipeCard.category,
-  headerBar: Main.headerBar
+  headerBar: Main.headerBar,
+  mainContainer:{
+    //width: '100%',
+    //height:'100%'
+  }
 });
 
 export default styles;
