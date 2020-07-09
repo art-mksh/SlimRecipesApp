@@ -116,7 +116,7 @@ export default class CustomHeader extends React.Component {
 
     let LeftCustomComponent, RightCustomComponent, CenterCustomComponent;
     
-    
+    //console.log(this.props.parent_navigation.state);
     if (
       this.props.parent_navigation.state.routeName === 'RecipesList'
       ||
@@ -144,45 +144,8 @@ export default class CustomHeader extends React.Component {
 
     if(this.props.parent_navigation.state.routeName ==='Search'){
 
-
-      CenterCustomComponent = 
-      (
-        <SearchBar
-          containerStyle={{
-            backgroundColor: 'transparent',
-            borderBottomColor: 'transparent',
-            borderTopColor: 'transparent',
-            flex: 1,
-            //flexWrap: 'nowrap',
-            //padding: 10,
-            alignItems:'center',
-            justifyContent:'center',
-            width: '100%'
-
-          }}
-          inputContainerStyle={{
-            backgroundColor: '#EDEDED',
-          }}
-          inputStyle={{
-            backgroundColor: '#EDEDED',
-            borderRadius: 10,
-            color: 'black',
-
-          }}
-          searchIcond
-          clearIcon
-          //lightTheme
-          round
-          onChangeText={text => this.props.parent_navigation.state.params.handleSearch(text)}
-          //onChangeText={text => this.props.onChangeText(text)}
-         // onChangeText={text => this.props.parent_navigation.state.handleSearch(text)}
-
-          //onClear={() => params.handleSearch('')}
-          placeholder="Поиск рецептов"
-          value={this.props.parent_navigation.state.data}
-          //value={this.props.parent_navigation.state.data}
-        />
-      );
+      //console.log(this.props.CustomSearchBar);
+      CenterCustomComponent =  this.props.CustomSearchBar;
     }else{
       CenterCustomComponent = 
       (<Text style={{

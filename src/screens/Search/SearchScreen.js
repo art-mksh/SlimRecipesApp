@@ -18,11 +18,46 @@ import {
 } from '../../data/MockDataAPI';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
 
+let SrchBr;
 export default class SearchScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
 
-    //const { params = {} } = navigation.state;
-    const { params } = navigation.state;
+    const { params = {} } = navigation.state;
+    //const { params } = navigation.state;
+
+    SrchBr = (<SearchBar
+      containerStyle={{
+        backgroundColor: 'transparent',
+        borderBottomColor: 'transparent',
+        borderTopColor: 'transparent',
+        flex: 1,
+        //flexWrap: 'nowrap',
+        //padding: 10,
+        alignItems:'center',
+        justifyContent:'center',
+        width: '100%'
+
+      }}
+      inputContainerStyle={{
+        backgroundColor: '#EDEDED',
+      }}
+      inputStyle={{
+        backgroundColor: '#EDEDED',
+        borderRadius: 10,
+        color: 'black',
+
+      }}
+      searchIcond
+      clearIcon
+      //lightTheme
+      round
+      onChangeText={text => params.handleSearch(text)}
+      //onClear={() => params.handleSearch('')}
+      placeholder="Поиск рецептов"
+      value={params.data}
+      //value={navigation.state.data}
+    />);
+
 
     return {
       headerShown: false,
@@ -33,33 +68,7 @@ export default class SearchScreen extends React.Component {
           }}
         />
       ),
-      headerTitle: () => (
-        <SearchBar
-          containerStyle={{
-            backgroundColor: 'transparent',
-            borderBottomColor: 'transparent',
-            borderTopColor: 'transparent',
-            flex: 1,
-          }}
-          inputContainerStyle={{
-            backgroundColor: '#EDEDED'
-          }}
-          inputStyle={{
-            backgroundColor: '#EDEDED',
-            borderRadius: 10,
-            color: 'black'
-          }}
-          searchIcond
-          clearIcon
-          //lightTheme
-          round
-          onChangeText={text => params.handleSearch(text)}
-          //onClear={() => params.handleSearch('')}
-          placeholder="Поиск рецептов"
-          //value={params.data}
-          value={navigation.state.data}
-        />
-      ),
+      headerTitle: () =>  SrchBr ,
       headerStyle: styles.headerBar
     };
   };
@@ -70,6 +79,9 @@ export default class SearchScreen extends React.Component {
       value: '',
       data: []
     };
+    this.PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
+    this.BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
+  
   }
 
   componentDidMount() {
@@ -100,21 +112,46 @@ export default class SearchScreen extends React.Component {
   };
 
   getValue = () => {
+   
     return this.state.value;
   };
 
   onPressRecipe = item => {
+    //console.log(item);
+    item.id = item.recipeId;
+
     this.props.navigation.navigate('Recipe', { item });
   };
 
+  
   renderRecipes = ({ item }) => (
-    <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={() => this.onPressRecipe(item)}>
-      <View style={styles.container}>
-        <Image style={styles.photo} source={{ uri: item.photo_url }} />
-        <Text style={styles.title}>{item.title}</Text>
-        <Text style={styles.category}>{getCategoryName(item.categoryId)}</Text>
+    <View>
+        <View style={{
+        flex: 1,
+        marginTop: 20,
+        marginLeft: 30,
+        marginRight: 30,
+        elevation: 50,
+      }}>
+      <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={() => this.onPressRecipe(item)}>
+      <View >
+            <ImageBackground
+              imageStyle={{
+                resizeMode: 'stretch'
+              }}
+              style={{
+                flex: 1,
+              }}
+              source={(this.BlueButtonBgImage)}
+            >
+        <View style={styles.container}>
+          <Text style={styles.title}>{item.title}</Text>
+        </View>
+        </ImageBackground>
+        </View>
+      </TouchableHighlight>
       </View>
-    </TouchableHighlight>
+    </View>
   );
 
   render() {
@@ -132,18 +169,17 @@ export default class SearchScreen extends React.Component {
           <CustomHeader  
                 parent_title_name={'Как сделать лизуна'} 
                 parent_navigation={this.props.navigation} 
-                setSstate={this.setState}
+                CustomSearchBar={SrchBr}
                 //onChangeText={text => this.props.navigation.state.params.handleSearch(text)}
           />
           <FlatList
             vertical
             showsVerticalScrollIndicator={false}
-            numColumns={2}
+            numColumns={1}
             data={this.state.data}
             renderItem={this.renderRecipes}
             keyExtractor={item => `${item.recipeId}`}
             style={{ paddingTop: 50}}
-
           />
        </ImageBackground>
       </View>

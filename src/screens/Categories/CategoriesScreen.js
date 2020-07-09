@@ -27,9 +27,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 export default class CategoriesScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
     headerShown: false,
-
     title: 'Как сделать лизуна',
-    //headerTransparent: true,
     headerStyle: {
       shadowOpacity: 0,
       shadowOffset: {
@@ -38,78 +36,27 @@ export default class CategoriesScreen extends React.Component {
       shadowRadius: 0,
       borderBottomWidth: 0,
       elevation: 0,
-      //backgroundColor: '#000',
-      //backgroundColor: 'rgba(52, 52, 52, 0.8)',
       opacity: 1,
     },
-
-
     headerLeft: () => <MenuImage
       onPress={() => {
         navigation.openDrawer();
       }}
     />,
-    //headerBackImage: () => 
-    //  <MyCustomHeaderBackImage style={styles.myCustomHeaderBackImageAlt} />
-    //,
-    //headerTitle: () => <ImageBackground resizeMode="contain"  style={{ height: 50 }} source={require('../../../assets/images/bg-header.png')} ><Text>Как сделать лизуна</Text></ImageBackground>,
-
   });
 
   constructor(props) {
     super(props);
-    this.PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg-5.png');
-    //this.BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
-    this.BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg-10.png');
+    this.PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
+    this.BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
   }
 
   onPressCategory = item => {
+    //console.log(item);
     const title = item.name;
     const category = item;
     this.props.navigation.navigate('RecipesList', { category, title });
   };
-
-
-  /*
-  renderCategory = ({ item, index }) => (
-    <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={() => this.onPressCategory(item)}>
-      <View >
-        <Text style={(index % 2 == 0?styles.categoriesBluePrefixName:styles.categoriesPinkPrefixName)}>{index == 0 ? 'Выбери:' : 'или'}</Text>
-       
-            <ImageBackground
-              imageStyle={{
-                //borderColor: 'black',
-                //borderRadius: 5,
-               // borderWidth: 10,
-                //borderBottomLeftRadius:5
-                //opacity:0.5
-                //tintColor:'red'
-              }}
-              style={{
-                //flex: 1,
-                resizeMode: 'cover', // or 'stretch'
-                marginTop: 20,
-                marginLeft:30,
-                marginRight:30,
-                
-                //height: 50,
-                //width: 170,
-                textShadowColor: 'black',
-                textShadowOffset: { width: 5, height: 5 },
-                textShadowRadius: 5,
-                shadowOpacity:0.5,
-                elevation: 10,
-              }}
-              source={(index % 2 == 0?this.BlueButtonBgImage:this.PinkButtonBgImage)}
-          >
-        <View style={styles.categoriesItemContainer}>
-          <Text style={styles.categoriesName}>{item.categories_screen_name}</Text>
-        </View>
-        </ImageBackground>
-        </View>
-    </TouchableHighlight>
-  );
-*/
 
 
   renderCategory = ({ item, index }) => (
