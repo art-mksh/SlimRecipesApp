@@ -37,7 +37,6 @@ export default class IngredientScreen extends React.Component {
     <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={() => this.onPressRecipe(item)}>
       <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={() => this.onPressRecipe(item)}>
         <View style={styles.container}>
-          {    console.log(item.recipeId)}
           <Text style={styles.title}>{item.title}</Text>
         </View>
       </TouchableHighlight>

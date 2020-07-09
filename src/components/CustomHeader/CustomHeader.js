@@ -116,7 +116,8 @@ export default class CustomHeader extends React.Component {
 
     let LeftCustomComponent, RightCustomComponent, CenterCustomComponent;
     
-    //console.log(this.props.parent_navigation.state);
+    //console.log(this.props.parent_navigation.state.params.title);
+
     if (
       this.props.parent_navigation.state.routeName === 'RecipesList'
       ||
@@ -147,6 +148,19 @@ export default class CustomHeader extends React.Component {
       //console.log(this.props.CustomSearchBar);
       CenterCustomComponent =  this.props.CustomSearchBar;
     }else{
+
+      let HeaderTitleName;
+
+      if(this.props.parent_navigation.state.routeName === 'Recipe'){
+        HeaderTitleName = this.props.parent_navigation.state.params.item.title;
+      }else if(this.props.parent_navigation.state.routeName === 'Ingredient'){
+        HeaderTitleName = this.props.parent_navigation.state.params.name;
+      }else if(this.props.parent_navigation.state.routeName === 'IngredientsDetails'){
+        HeaderTitleName = this.props.parent_navigation.state.params.title;
+      }else{
+        HeaderTitleName = this.props.parent_title_name;
+      }
+
       CenterCustomComponent = 
       (<Text style={{
         //color: '#ff4ebd', 
@@ -159,7 +173,7 @@ export default class CustomHeader extends React.Component {
         },
         shadowRadius: 3
       }}>
-        {(this.props.parent_navigation.state.routeName === 'Recipe'?this.props.parent_navigation.state.params.item.title:this.props.parent_title_name)}
+        {HeaderTitleName}
       </Text>);
     }
 
