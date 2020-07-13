@@ -13,6 +13,7 @@ import {
   Button,
   Icon,
   Right,
+  Animated
 } from 'react-native';
 import styles from './styles';
 import { categories } from '../../data/dataArrays';
@@ -25,6 +26,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 
 export default class CategoriesScreen extends React.Component {
+  
   static navigationOptions = ({ navigation }) => ({
     headerShown: false,
     title: 'Как сделать лизуна',
@@ -45,16 +47,24 @@ export default class CategoriesScreen extends React.Component {
     />,
   });
 
+  
+
+
+
   constructor(props) {
     super(props);
     this.PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
     this.BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
+    
   }
 
   onPressCategory = item => {
     //console.log(item);
     const title = item.name;
     const category = item;
+
+
+
     this.props.navigation.navigate('RecipesList', { category, title });
   };
 
@@ -69,6 +79,8 @@ export default class CategoriesScreen extends React.Component {
         marginRight: 30,
         elevation: 50,
       }}>
+        <Animated.View>
+
         <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={() => this.onPressCategory(item)} >
           <View >
             <ImageBackground
@@ -86,6 +98,8 @@ export default class CategoriesScreen extends React.Component {
             </ImageBackground>
           </View>
         </TouchableHighlight>
+        </Animated.View>
+
       </View>
     </View>
   );

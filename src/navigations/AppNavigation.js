@@ -8,14 +8,12 @@ import {createDrawerNavigator} from '@react-navigation/drawer' */
 
 
 
-
 /* SCREENS */
 
 import HomeScreen from '../screens/Home/HomeScreen';
 import CategoriesScreen from '../screens/Categories/CategoriesScreen';
 import RecipeScreen from '../screens/Recipe/RecipeScreen';
 import RecipesListScreen from '../screens/RecipesList/RecipesListScreen';
-import DrawerContainer from '../screens/DrawerContainer/DrawerContainer';
 import IngredientScreen from '../screens/Ingredient/IngredientScreen';
 import SearchScreen from '../screens/Search/SearchScreen';
 import IngredientsDetailsScreen from '../screens/IngredientsDetails/IngredientsDetailsScreen';
@@ -25,14 +23,15 @@ import IngredientsDetailsScreen from '../screens/IngredientsDetails/IngredientsD
 
 /* COMPONENTS */
 
-import CustomHeader from '../components/CustomHeader/CustomHeader';
+//import CustomHeader from '../components/CustomHeader/CustomHeader';
+import DrawerContainer from '../screens/DrawerContainer/DrawerContainer';
 
 /* (END) COMPONENTS */
 
-import React from 'react';
-import { TouchableHighlight, Image, Text, View } from 'react-native';
+//import React from 'react';
+//import { TouchableHighlight, Image, Text, View } from 'react-native';
 
-import { StyleSheet } from 'react-native';
+//import { StyleSheet } from 'react-native';
 
 const MainNavigator = createStackNavigator(
   {

@@ -37,6 +37,15 @@ export default class RecipesListScreen extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
+
+    this.PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
+
+    this.BlueBackgroundImage = require('../../../assets/ScreenBackgroundImages/background-image-5.png');
+
+    this.PinkBackgroundImage = require('../../../assets/ScreenBackgroundImages/background-image-3.png');
+
   }
 
   onPressRecipe = item => {
@@ -44,8 +53,6 @@ export default class RecipesListScreen extends React.Component {
   };
 
 
-  PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
-  BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
 
 
   renderRecipes = ({ item }) => (
@@ -62,7 +69,7 @@ export default class RecipesListScreen extends React.Component {
             style={{
               flex: 1,
             }}
-            source={require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png')}
+            source={(this.props.navigation.state.params.title  === 'Виды слаймов' ?  this.BlueButtonBgImage :this.PinkButtonBgImage)}
           >
             <View style={styles.container}>
               <Text style={styles.title}>{item.title}</Text>
@@ -74,7 +81,10 @@ export default class RecipesListScreen extends React.Component {
   );
 
   render() {
+
     const { navigation } = this.props;
+
+
     const item = navigation.getParam('category');
     const recipesArray = getRecipes(item.id);
     return (
@@ -84,7 +94,7 @@ export default class RecipesListScreen extends React.Component {
             flex: 1,
             resizeMode: 'cover'
           }}
-          source={require('../../../assets/ScreenBackgroundImages/Categories/background-image.png')}
+          source={(this.props.navigation.state.params.title  === 'Виды слаймов' ?  this.PinkBackgroundImage :this.BlueBackgroundImage)}
         >
           <CustomHeader
             parent_title_name={navigation.getParam('title')}

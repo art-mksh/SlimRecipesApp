@@ -6,107 +6,8 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 import MenuImage from '../../components/MenuImage/MenuImage';
 import BackButton from '../../components/BackButton/BackButton';
-import { ListItem, SearchBar } from 'react-native-elements';
 
-import {
-  getCategoryName,
-  getRecipesByRecipeName,
-  getRecipesByCategoryName,
-  getRecipesByIngredientName
-} from '../../data/MockDataAPI';
-var params;
 export default class CustomHeader extends React.Component {
-
-  static navigationOptions = ({ navigation }) => {
-
-    //const { params = {} } = navigation.state;
-    //const { params } = navigation.state;
-     //'params = this.props.parent_navigation.state.params;
-
-    return {
-      headerShown: false,
-      headerRight: () => (
-        <MenuImage
-          onPress={() => {
-            navigation.openDrawer();
-          }}
-        />
-      ),
-      headerTitle: () => (
-        <SearchBar
-          containerStyle={{
-            backgroundColor: 'transparent',
-            borderBottomColor: 'transparent',
-            borderTopColor: 'transparent',
-            flex: 1,
-          }}
-          inputContainerStyle={{
-            backgroundColor: '#EDEDED'
-          }}
-          inputStyle={{
-            backgroundColor: '#EDEDED',
-            borderRadius: 10,
-            color: 'black'
-          }}
-          searchIcond
-          clearIcon
-          //lightTheme
-          round
-          onChangeText={text => params.handleSearch(text)}
-          //onClear={() => params.handleSearch('')}
-          placeholder="Поиск рецептов"
-          //value={params.data}
-          value={navigation.state.data}
-        />
-      ),
-      headerStyle: styles.headerBar
-    };
-  };
-
-  constructor(props) {
-    super(props);
-    this.props.parent_navigation.state = {
-      value: '',
-      data: []
-    };
-  }
-
-  componentDidMount() {
-    //const { navigation } = this.props;
-    const navigation = this.props.parent_navigation;
-    navigation.setParams({
-      handleSearch: this.handleSearch,
-      data: this.getValue
-    });
-  }
-
-  handleSearch = text => {
-    var recipeArray1 = getRecipesByRecipeName(text);
-    var recipeArray2 = getRecipesByCategoryName(text);
-    var recipeArray3 = getRecipesByIngredientName(text);
-    var aux = recipeArray1.concat(recipeArray2);
-    var recipeArray = [...new Set(aux)];
-    //console.log(this);
-    if (text == '') {
-      this.props.parent_navigation.setState({
-        value: text,
-        data: []
-      });
-    } else {
-      this.props.parent_navigation.setState({
-        value: text,
-        data: recipeArray
-      });
-    }
-  };
-
-  getValue = () => {
-    return this.props.parent_navigation.state.value;
-  };
-
-  onPressRecipe = item => {
-    this.props.parent_navigation.navigate('Recipe', { item });
-  };
 
 
 
@@ -117,6 +18,7 @@ export default class CustomHeader extends React.Component {
     let LeftCustomComponent, RightCustomComponent, CenterCustomComponent;
     
     //console.log(this.props.parent_navigation.state.params.title);
+    console.log(this.props.parent_navigation.state.routeName);
 
     if (
       this.props.parent_navigation.state.routeName === 'RecipesList'
@@ -136,7 +38,9 @@ export default class CustomHeader extends React.Component {
           }}
         />
       );
-      RightCustomComponent = <MenuImage onPress={() => { this.props.parent_navigation.openDrawer(); }} />;
+      RightCustomComponent = <MenuImage 
+                                        onPress={() => { this.props.parent_navigation.openDrawer(); }} 
+                              />;
     } else {
       LeftCustomComponent = <MenuImage onPress={() => { this.props.parent_navigation.openDrawer(); }} />;
       RightCustomComponent = <View></View>;
@@ -149,7 +53,7 @@ export default class CustomHeader extends React.Component {
       CenterCustomComponent =  this.props.CustomSearchBar;
     }else{
 
-      let HeaderTitleName;
+      let HeaderTitleName,CenterComponentTextColor;
 
       if(this.props.parent_navigation.state.routeName === 'Recipe'){
         HeaderTitleName = this.props.parent_navigation.state.params.item.title;
@@ -161,10 +65,23 @@ export default class CustomHeader extends React.Component {
         HeaderTitleName = this.props.parent_title_name;
       }
 
+      if(this.props.parent_navigation.state.routeName === 'RecipesList'){
+
+        if(this.props.parent_navigation.state.params.category.name === 'Виды слаймов'){
+          CenterComponentTextColor = '#ff5ec7';
+        }else{
+          CenterComponentTextColor = '#48c3ff';
+        }
+
+
+      }else{
+        CenterComponentTextColor = 'white';
+      }
+
       CenterCustomComponent = 
       (<Text style={{
         //color: '#ff4ebd', 
-        color: 'white', 
+        color: CenterComponentTextColor, 
         fontSize: 27, 
         shadowColor: "black",
         fontFamily:'GUERRILLA-Normal',
