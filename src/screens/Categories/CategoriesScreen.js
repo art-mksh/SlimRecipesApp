@@ -52,10 +52,18 @@ export default class CategoriesScreen extends React.Component {
 
 
   constructor(props) {
+
     super(props);
     this.PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
+    this.PressedPinkButtonBgImage  = require('../../../assets/ButtonBackgroundImage/pink-btn-bg-pressed.png');
     this.BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
-    
+    this.PressedBlueButtonBgImage  = require('../../../assets/ButtonBackgroundImage/blue-btn-bg-pressed.png');
+
+    this.state = {
+      firstButtonState: this.PinkButtonBgImage , 
+      secondButtonState: this.BlueButtonBgImage,
+    };
+    //this.setState({buttonPushed:true});
   }
 
   onPressCategory = item => {
@@ -81,11 +89,47 @@ export default class CategoriesScreen extends React.Component {
       }}>
         <Animated.View>
           <TouchableHighlight 
-          underlayColor='rgba(73,182,77,0.9)' 
-          onPress={() => this.onPressCategory(item)} 
-          onClick={() => this.setState({ fade: true })}
-          onAnimationEnd={() => this.setState({ fade: false })}
-          
+            underlayColor='rgba(73,182,77,0.9)' 
+            //onPress={() => this.onPressCategory(item)} 
+            onPress={() => { 
+              console.log('click');
+              //this.setState({ (index % 2 == 0 ? 'buttonPushed':'buttonPushed') : true })} 
+              const module_this = this;
+
+              if(index % 2 == 0){
+
+                /*
+                  module_this.setState({ secondButtonState :  module_this.PressedPinkButtonBgImage });
+                  setTimeout(function run() {
+                    module_this.setState({ secondButtonState :  module_this.PinkButtonBgImage });
+                  }, 100);
+                  */
+
+                 module_this.setState({ secondButtonState :  module_this.PressedBlueButtonBgImage });
+                 setTimeout(function run() {
+                   module_this.setState({ secondButtonState :  module_this.BlueButtonBgImage });
+                   module_this.onPressCategory(item)
+                 }, 300);
+              }else{
+
+                /*
+                  module_this.setState({ firstButtonState :  module_this.PressedBlueButtonBgImage });
+                  setTimeout(function run() {
+                    module_this.setState({ firstButtonState :  module_this.BlueButtonBgImage });
+                  }, 100);
+                */
+                 
+               module_this.setState({ firstButtonState :  module_this.PressedPinkButtonBgImage });
+               setTimeout(function run() {
+                 module_this.setState({ firstButtonState :  module_this.PinkButtonBgImage });
+                 module_this.onPressCategory(item)
+               }, 300);
+
+
+              }
+
+            }}
+           
           >
             <View >
               <ImageBackground
@@ -95,7 +139,8 @@ export default class CategoriesScreen extends React.Component {
                 style={{
                   flex: 1,
                 }}
-                source={(index % 2 == 0 ? this.BlueButtonBgImage : this.PinkButtonBgImage)}
+                source={(index % 2 == 0 ? (this.state.secondButtonState) : (this.state.firstButtonState))}
+                //source={(index % 2 == 0 ? (this.state.firstButtonState) : (this.state.secondButtonState))}
               >
                 <View style={styles.categoriesItemContainer}>
                   <Text style={styles.categoriesName}>{item.categories_screen_name}</Text>
@@ -113,7 +158,7 @@ export default class CategoriesScreen extends React.Component {
 
   render() {
 
-
+    console.log(this.state);
     return (
       <View style={{ flex: 1 }} >
         <ImageBackground

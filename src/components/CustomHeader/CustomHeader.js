@@ -9,8 +9,11 @@ import BackButton from '../../components/BackButton/BackButton';
 
 export default class CustomHeader extends React.Component {
 
+  constructor(props) {
+    super(props);
+  
 
-
+  }
 
   render() {
 
@@ -39,10 +42,15 @@ export default class CustomHeader extends React.Component {
         />
       );
       RightCustomComponent = <MenuImage 
-                                        onPress={() => { this.props.parent_navigation.openDrawer(); }} 
+                                        onPress={() => { 
+                                          this.props.parent_navigation.openDrawer(); 
+                                        }} 
                               />;
     } else {
-      LeftCustomComponent = <MenuImage onPress={() => { this.props.parent_navigation.openDrawer(); }} />;
+      LeftCustomComponent = <MenuImage onPress={() => { 
+                                          this.props.parent_navigation.openDrawer(); 
+                                        }} 
+                              />;
       RightCustomComponent = <View></View>;
     }
 
