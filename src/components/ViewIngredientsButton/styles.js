@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     justifyContent: 'center',
     alignItems: 'center',
-     backgroundColor: '#ff5ec7'
+     //backgroundColor: '#ff5ec7'
   },
   text: {
     fontSize: 16,

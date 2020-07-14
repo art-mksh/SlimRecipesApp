@@ -84,7 +84,8 @@ export default class RecipeScreen extends React.Component {
               //height:viewportHeight,
               //width:Dimensions.get('window').width
             }}
-            source={category.id==3?this.BlueBackgroundImage:this.PinkBackgroundImage}
+            //source={category.id==3?this.BlueBackgroundImage:this.PinkBackgroundImage}
+            source={category.id==3?this.PinkBackgroundImage:this.BlueBackgroundImage}
           >
               <View style={styles.carouselContainer}>
                 <CustomHeader
@@ -133,6 +134,7 @@ export default class RecipeScreen extends React.Component {
                         let title = 'Ingredients for ' + item.title;
                         navigation.navigate('IngredientsDetails', { ingredients, title });
                       }}
+                      button_color={category.id==3?'#ff5ec7':'#0189d7'}
                     />
                   </View>
                   <View style={styles.infoContainer}>

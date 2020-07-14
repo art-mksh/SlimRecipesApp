@@ -91,39 +91,24 @@ export default class CategoriesScreen extends React.Component {
           <TouchableHighlight 
             underlayColor='rgba(73,182,77,0.9)' 
             //onPress={() => this.onPressCategory(item)} 
-            onPress={() => { 
-              console.log('click');
-              //this.setState({ (index % 2 == 0 ? 'buttonPushed':'buttonPushed') : true })} 
+            onPress={(e) => { 
+              
               const module_this = this;
-
               if(index % 2 == 0){
-
-                /*
-                  module_this.setState({ secondButtonState :  module_this.PressedPinkButtonBgImage });
-                  setTimeout(function run() {
-                    module_this.setState({ secondButtonState :  module_this.PinkButtonBgImage });
-                  }, 100);
-                  */
 
                  module_this.setState({ secondButtonState :  module_this.PressedBlueButtonBgImage });
                  setTimeout(function run() {
                    module_this.setState({ secondButtonState :  module_this.BlueButtonBgImage });
                    module_this.onPressCategory(item)
-                 }, 300);
-              }else{
+                 }, 100);
 
-                /*
-                  module_this.setState({ firstButtonState :  module_this.PressedBlueButtonBgImage });
-                  setTimeout(function run() {
-                    module_this.setState({ firstButtonState :  module_this.BlueButtonBgImage });
-                  }, 100);
-                */
+              }else{
                  
                module_this.setState({ firstButtonState :  module_this.PressedPinkButtonBgImage });
                setTimeout(function run() {
                  module_this.setState({ firstButtonState :  module_this.PinkButtonBgImage });
                  module_this.onPressCategory(item)
-               }, 300);
+               }, 100);
 
 
               }
