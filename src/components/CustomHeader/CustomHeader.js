@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableHighlight, Image, Text, View } from 'react-native';
+import { TouchableHighlight, Image, Text, View,ImageBackground } from 'react-native';
 import { Header, ThemeConsumer } from 'react-native-elements';
 
 import PropTypes from 'prop-types';
@@ -82,7 +82,7 @@ export default class CustomHeader extends React.Component {
       (<Text style={{
         //color: '#ff4ebd', 
         color: CenterComponentTextColor, 
-        fontSize: 27, 
+        fontSize: 29, 
         shadowColor: "black",
         fontFamily:'GUERRILLA-Normal',
         shadowOffset: {

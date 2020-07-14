@@ -18,19 +18,25 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 3
     */
-   padding: 10,
+   //padding: 10,
    borderWidth:1,
-   borderColor:'rgba(0,0,0,0.2)',
+   //borderColor:'rgba(0,0,0,0.2)',
+   borderColor:'white',
    alignItems:'center',
    justifyContent:'center',
    width:50,
    height:50,
-   backgroundColor:'#fff',
-   borderRadius:25
+   backgroundColor:'#ff5ec7',
+   borderRadius:25,
+   overflow:"hidden",
+
   },
   btnIcon: {
-    height: 25,
-    width: 25
+    //padding:10,
+    //opacity:1,
+    //marginTop:5,
+    height: 45,
+    width: 45
   }
 });
 

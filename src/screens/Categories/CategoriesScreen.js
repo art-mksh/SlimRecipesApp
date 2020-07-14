@@ -80,24 +80,29 @@ export default class CategoriesScreen extends React.Component {
         elevation: 50,
       }}>
         <Animated.View>
-
-        <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={() => this.onPressCategory(item)} >
-          <View >
-            <ImageBackground
-              imageStyle={{
-                resizeMode: 'stretch'
-              }}
-              style={{
-                flex: 1,
-              }}
-              source={(index % 2 == 0 ? this.BlueButtonBgImage : this.PinkButtonBgImage)}
-            >
-              <View style={styles.categoriesItemContainer}>
-                <Text style={styles.categoriesName}>{item.categories_screen_name}</Text>
-              </View>
-            </ImageBackground>
-          </View>
-        </TouchableHighlight>
+          <TouchableHighlight 
+          underlayColor='rgba(73,182,77,0.9)' 
+          onPress={() => this.onPressCategory(item)} 
+          onClick={() => this.setState({ fade: true })}
+          onAnimationEnd={() => this.setState({ fade: false })}
+          
+          >
+            <View >
+              <ImageBackground
+                imageStyle={{
+                  resizeMode: 'stretch'
+                }}
+                style={{
+                  flex: 1,
+                }}
+                source={(index % 2 == 0 ? this.BlueButtonBgImage : this.PinkButtonBgImage)}
+              >
+                <View style={styles.categoriesItemContainer}>
+                  <Text style={styles.categoriesName}>{item.categories_screen_name}</Text>
+                </View>
+              </ImageBackground>
+            </View>
+          </TouchableHighlight>
         </Animated.View>
 
       </View>

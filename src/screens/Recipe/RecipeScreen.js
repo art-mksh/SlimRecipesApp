@@ -64,11 +64,23 @@ export default class RecipeScreen extends React.Component {
    
     return (
       <ScrollView style={styles.container}>
+                <View style={{ flex: 1 }}>
+
+          <ImageBackground
+            style={{
+              //resizeMode: 'cover',
+              //height:'100%',
+              //width:'100%'
+            }}
+            source={require('../../../assets/ScreenBackgroundImages/background-image-6.png')}
+          >
+             <View style={{ flex: 1 }}>
         <View style={styles.carouselContainer}>
         <CustomHeader  
               parent_title_name={'Как сделать лизуна'} 
               parent_navigation={this.props.navigation} 
         />
+        <View>
           <View style={styles.carousel}>
             <Carousel
               ref={c => {
@@ -101,29 +113,23 @@ export default class RecipeScreen extends React.Component {
             />
           </View>
         </View>
-        <ImageBackground
-          style={{
-            flex: 1,
-            resizeMode: 'cover'
-          }}
-          source={require('../../../assets/ScreenBackgroundImages/background-image-6.png')}
-        >
-          <View style={styles.infoRecipeContainer}>
-            <View style={styles.infoContainer}>
-              <ViewIngredientsButton
-                onPress={() => {
-                  let ingredients = item.ingredients;
-                  let title = 'Ingredients for ' + item.title;
-                  navigation.navigate('IngredientsDetails', { ingredients, title });
-                }}
-              />
-            </View>
-            <View style={styles.infoContainer}>
-              <Text style={styles.infoDescriptionRecipe}>{item.description}</Text>
-            </View>
-          </View>
-        </ImageBackground>
-
+        
+            <View style={styles.infoRecipeContainer}>
+              <View style={styles.infoContainer}>
+                <ViewIngredientsButton
+                  onPress={() => {
+                    let ingredients = item.ingredients;
+                    let title = 'Ingredients for ' + item.title;
+                    navigation.navigate('IngredientsDetails', { ingredients, title });
+                  }}
+                />
+              </View>
+              <View style={styles.infoContainer}>
+                <Text style={styles.infoDescriptionRecipe}>{item.description}</Text>
+              </View>
+            </View></View></View>
+          </ImageBackground>
+        </View>
       </ScrollView>
     );
   }
