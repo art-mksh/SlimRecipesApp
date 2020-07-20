@@ -59,7 +59,7 @@ export default class CategoriesScreen extends React.Component {
     
     const categoriesArray = categories;
     const categoriesArrayLength = categoriesArray.length;
-    let defaultButtonStatesArray = [],pressedButtonStatesArray = []; 
+    let defaultButtonStatesArray = [],pressedButtonStatesArray = [], currentButtonsState = []; 
     let itr;
     let BlueScreenDefaultButtonState = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
     let BlueScreenPressedButtonState = require('../../../assets/ButtonBackgroundImage/blue-btn-bg-pressed.png');
@@ -68,19 +68,22 @@ export default class CategoriesScreen extends React.Component {
 
     for (itr = 0; itr < categoriesArrayLength; itr++) {
 
-      if(itr % 2 == 0){
+        if(itr % 2 == 0){
 
-        defaultButtonStatesArray[itr] = BlueScreenDefaultButtonState;
-        pressedButtonStatesArray[itr] = BlueScreenPressedButtonState;
+          defaultButtonStatesArray[itr] = BlueScreenDefaultButtonState;
+          pressedButtonStatesArray[itr] = BlueScreenPressedButtonState;
+          currentButtonsState[itr] = BlueScreenDefaultButtonState;
 
-      }else{
+        }else{
 
-        defaultButtonStatesArray[itr] = PinktScreenDefaultButtonState;
-        pressedButtonStatesArray[itr] = PinkScreenPressedButtonState;
+          defaultButtonStatesArray[itr] = PinktScreenDefaultButtonState;
+          pressedButtonStatesArray[itr] = PinkScreenPressedButtonState;
+          currentButtonsState[itr] = PinktScreenDefaultButtonState;
 
-      }
+        }
 
     }
+
 
     this.PinkButtonBgImage = PinktScreenDefaultButtonState;
     this.PressedPinkButtonBgImage  = PinkScreenPressedButtonState;
@@ -90,6 +93,7 @@ export default class CategoriesScreen extends React.Component {
     this.state = {
       firstButtonState: this.PinkButtonBgImage , 
       secondButtonState: this.BlueButtonBgImage,
+      currentButtonsState: currentButtonsState,
       defaultButtonStatesArray: defaultButtonStatesArray,
       pressedButtonStatesArray: pressedButtonStatesArray
     };
@@ -123,24 +127,19 @@ export default class CategoriesScreen extends React.Component {
             onPress={(e) => { 
               
               const module_this = this;
-              if(index % 2 == 0){
+              let currentButtonsState =  module_this.state.currentButtonsState;
+              currentButtonsState[index] = module_this.state.pressedButtonStatesArray[index];
+              module_this.setState({ currentButtonsState: currentButtonsState });
 
-                 module_this.setState({ secondButtonState :  module_this.PressedBlueButtonBgImage });
-                 setTimeout(function run() {
-                   module_this.setState({ secondButtonState :  module_this.BlueButtonBgImage });
-                   module_this.onPressCategory(item);
-                 }, 100);
+              setTimeout(function run() {
 
-              }else{
-                 
-               module_this.setState({ firstButtonState :  module_this.PressedPinkButtonBgImage });
-               setTimeout(function run() {
-                 module_this.setState({ firstButtonState :  module_this.PinkButtonBgImage });
-                 module_this.onPressCategory(item);
-               }, 100);
+                currentButtonsState[index] = module_this.state.defaultButtonStatesArray[index];
+                module_this.setState({ currentButtonsState: currentButtonsState });
+  
+                module_this.onPressCategory(item);
+  
+              }, 100);
 
-
-              }
 
             }}
            
@@ -153,8 +152,7 @@ export default class CategoriesScreen extends React.Component {
                 style={{
                   flex: 1,
                 }}
-                source={(index % 2 == 0 ? (this.state.secondButtonState) : (this.state.firstButtonState))}
-                //source={(index % 2 == 0 ? (this.state.firstButtonState) : (this.state.secondButtonState))}
+                source={(this.state.currentButtonsState[index])}
               >
                 <View style={styles.categoriesItemContainer}>
                   <Text style={styles.categoriesName}>{item.categories_screen_name}</Text>

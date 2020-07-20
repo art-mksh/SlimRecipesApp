@@ -109,7 +109,7 @@ export default class RecipesListScreen extends React.Component {
 
               module_this.onPressRecipe(item);
 
-            }, 300);
+            }, 100);
 
           }}
 
