@@ -54,16 +54,48 @@ export default class CategoriesScreen extends React.Component {
 
   constructor(props) {
 
+
     super(props);
-    this.PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
-    this.PressedPinkButtonBgImage  = require('../../../assets/ButtonBackgroundImage/pink-btn-bg-pressed.png');
-    this.BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
-    this.PressedBlueButtonBgImage  = require('../../../assets/ButtonBackgroundImage/blue-btn-bg-pressed.png');
+    
+    const categoriesArray = categories;
+    const categoriesArrayLength = categoriesArray.length;
+    let defaultButtonStatesArray = [],pressedButtonStatesArray = []; 
+    let itr;
+    let BlueScreenDefaultButtonState = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
+    let BlueScreenPressedButtonState = require('../../../assets/ButtonBackgroundImage/blue-btn-bg-pressed.png');
+    let PinktScreenDefaultButtonState = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
+    let PinkScreenPressedButtonState = require('../../../assets/ButtonBackgroundImage/pink-btn-bg-pressed.png');
+
+    for (itr = 0; itr < categoriesArrayLength; itr++) {
+
+      if(itr % 2 == 0){
+
+        defaultButtonStatesArray[itr] = BlueScreenDefaultButtonState;
+        pressedButtonStatesArray[itr] = BlueScreenPressedButtonState;
+
+      }else{
+
+        defaultButtonStatesArray[itr] = PinktScreenDefaultButtonState;
+        pressedButtonStatesArray[itr] = PinkScreenPressedButtonState;
+
+      }
+
+    }
+
+    this.PinkButtonBgImage = PinktScreenDefaultButtonState;
+    this.PressedPinkButtonBgImage  = PinkScreenPressedButtonState;
+    this.BlueButtonBgImage = BlueScreenDefaultButtonState;
+    this.PressedBlueButtonBgImage  = BlueScreenPressedButtonState;
 
     this.state = {
       firstButtonState: this.PinkButtonBgImage , 
       secondButtonState: this.BlueButtonBgImage,
+      defaultButtonStatesArray: defaultButtonStatesArray,
+      pressedButtonStatesArray: pressedButtonStatesArray
     };
+
+
+
     //this.setState({buttonPushed:true});
   }
 
@@ -71,8 +103,6 @@ export default class CategoriesScreen extends React.Component {
     //console.log(item);
     const title = item.name;
     const category = item;
-
-
 
     this.props.navigation.navigate('RecipesList', { category, title });
   };
@@ -141,7 +171,6 @@ export default class CategoriesScreen extends React.Component {
 
   render() {
 
-    console.log(this.state);
     return (
       <View style={{ flex: 1 }} >
         <ImageBackground
