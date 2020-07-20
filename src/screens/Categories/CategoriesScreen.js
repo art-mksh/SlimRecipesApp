@@ -13,7 +13,8 @@ import {
   Button,
   Icon,
   Right,
-  Animated
+  Animated,
+  TouchableOpacity  
 } from 'react-native';
 import styles from './styles';
 import { categories } from '../../data/dataArrays';
@@ -87,10 +88,8 @@ export default class CategoriesScreen extends React.Component {
         marginRight: 30,
         elevation: 50,
       }}>
-        <Animated.View>
           <TouchableHighlight 
-            underlayColor='rgba(73,182,77,0.9)' 
-            //onPress={() => this.onPressCategory(item)} 
+            underlayColor='rgba(105,105,105,0.9)' 
             onPress={(e) => { 
               
               const module_this = this;
@@ -133,7 +132,6 @@ export default class CategoriesScreen extends React.Component {
               </ImageBackground>
             </View>
           </TouchableHighlight>
-        </Animated.View>
 
       </View>
     </View>

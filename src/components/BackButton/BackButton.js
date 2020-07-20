@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableHighlight, Image, Text, View,ImageBackground } from 'react-native';
+import { TouchableHighlight, Image, Text, View,ImageBackground,TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from './styles';
 
@@ -13,36 +13,17 @@ export default class BackButton extends React.Component {
     const FaIconsMargin = 0;
 
     return (
-      <TouchableHighlight  underlayColor='rgba(73,182,77,0.9)'  onPress={this.props.onPress} style={styles.btnContainer}>
+      <TouchableOpacity  
+      //underlayColor='rgba(73,182,77,0.9)'  
+      onPress={this.props.onPress} 
+      style={styles.btnContainer}>
         
             <FontAwesomeIcon  style={{color:'white', margin:FaIconsMargin,}} size={ FaIconsSize } icon={ faArrowLeft }  />
             
-      </TouchableHighlight>
+      </TouchableOpacity>
     );
   }
 }
-
-/*
-
-  <TouchableHighlight onPress={this.props.onPress} style={styles.btnContainer}>
-         <ImageBackground
-            imageStyle={{
-              resizeMode: 'cover'
-            }}
-            style={{
-              flex: 1,
-              //height:200,
-              //width:200,
-              //opacity:0.8,
-              //alignItems: 'center',//fa-arrow-right 
-
-            }}
-            source={require('../../../assets/button_bg_2.png')}
-          >
-            <Image source={require('../../../assets/icons/arrow_back_black_outline.png')} style={styles.btnIcon} />
-        </ImageBackground>
-      </TouchableHighlight>
-*/      
 
 BackButton.propTypes = {
   onPress: PropTypes.func,

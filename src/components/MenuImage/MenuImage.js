@@ -7,22 +7,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 export default class MenuImage extends React.Component {
   render() {
-    /*
-    return (
-      <TouchableOpacity style={styles.headerButtonContainer} onPress={this.props.onPress}>
-        <Image
-          style={styles.headerButtonImage}
-          source={require('../../../assets/icons/menu.png')}
-        />
-          <FontAwesomeIcon style={{color:'white', margin:FaIconsMargin}} size={ FaIconsSize } icon={ faBars } />
-      </TouchableOpacity>
-    );
-    */
+ 
    const FaIconsSize = 30;
    const FaIconsMargin = 0;
 
     return (
-      <TouchableOpacity underlayColor='rgba(73,182,77,0.9)' style={styles.headerButtonContainer} onPress={this.props.onPress}>
+      <TouchableOpacity 
+      //underlayColor='rgba(73,182,77,0.9)' 
+      style={styles.headerButtonContainer} 
+      onPress={this.props.onPress}>
          
             <FontAwesomeIcon style={{color:'white', margin:FaIconsMargin}} size={ FaIconsSize } icon={ faBars } />
       </TouchableOpacity>
