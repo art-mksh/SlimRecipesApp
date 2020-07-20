@@ -39,12 +39,34 @@ export default class RecipeScreen extends React.Component {
       activeSlide: 0
     };
 
+    const { navigation } = this.props;
+    const currItem = navigation.getParam('item');
+    const category = getCategoryById(currItem.categoryId);
+    const PinkBackgroundImage = require('../../../assets/ScreenBackgroundImages/background-image-8.png');
+    const BlueBackgroundImage = require('../../../assets/ScreenBackgroundImages/background-image-9.png');
 
-    this.PinkBackgroundImage = require('../../../assets/ScreenBackgroundImages/background-image-8.png');
-    this.BlueBackgroundImage = require('../../../assets/ScreenBackgroundImages/background-image-9.png');
+    let currentPressedButtonColor, currentDefaultButtonColor,currentScreenBackgroundImage;
 
-    //this.PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
-    //this.BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
+    if(category.id == 3){
+      currentPressedButtonColor = "rgba(255, 94, 199, 0.8)";
+      currentDefaultButtonColor = "rgba(255, 94, 199, 1)";
+      currentScreenBackgroundImage = PinkBackgroundImage;
+    }else{
+      currentPressedButtonColor = "rgba(1, 137, 215, 0.8)";
+      currentDefaultButtonColor = "rgba(1, 137, 215, 1)";
+      currentScreenBackgroundImage = BlueBackgroundImage;
+    }
+
+    this.currentPressedButtonColor = currentPressedButtonColor;
+    this.currentDefaultButtonColor = currentDefaultButtonColor;
+    this.currentScreenBackgroundImage = currentScreenBackgroundImage;
+
+    this.state = {
+      currentButtonStateColor : currentDefaultButtonColor
+    }
+
+  
+
   }
 
   renderImage = ({ item }) => (
@@ -64,10 +86,10 @@ export default class RecipeScreen extends React.Component {
   render() {
 
     const { activeSlide } = this.state;
+    
     const { navigation } = this.props;
     const item = navigation.getParam('item');
     const category = getCategoryById(item.categoryId);
-    const title = getCategoryName(category.id);
 
     return (
       <ScrollView style={styles.container}>
@@ -85,7 +107,7 @@ export default class RecipeScreen extends React.Component {
               //width:Dimensions.get('window').width
             }}
             //source={category.id==3?this.BlueBackgroundImage:this.PinkBackgroundImage}
-            source={category.id==3?this.PinkBackgroundImage:this.BlueBackgroundImage}
+            source={(this.currentScreenBackgroundImage)}
           >
               <View style={styles.carouselContainer}>
                 <CustomHeader
@@ -128,11 +150,30 @@ export default class RecipeScreen extends React.Component {
                   <View style={styles.infoContainer}>
                     <ViewIngredientsButton
                       onPress={() => {
-                        let ingredients = item.ingredients;
-                        let title = 'Ingredients for ' + item.title;
-                        navigation.navigate('IngredientsDetails', { ingredients, title });
+
+                        const module_this = this;
+
+                        let currentButtonStateColor = module_this.currentButtonStateColor;
+            
+                        currentButtonStateColor = this.currentPressedButtonColor;
+                        module_this.setState({ currentButtonStateColor: currentButtonStateColor });
+            
+                        setTimeout(function run() {
+            
+                          currentButtonStateColor = module_this.currentDefaultButtonColor;
+            
+                          module_this.setState({ currentButtonStateColor: currentButtonStateColor });
+            
+                          let ingredients = item.ingredients;
+                          let title = 'Ingredients for ' + item.title;
+
+                          navigation.navigate('IngredientsDetails', { ingredients, title });
+            
+                        }, 100);
+
+
                       }}
-                      button_color={category.id==3?'#ff5ec7':'#0189d7'}
+                      button_color={(this.state.currentButtonStateColor)}
                     />
                   </View>
                   <View style={styles.infoContainer}>

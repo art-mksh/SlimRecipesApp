@@ -14,7 +14,7 @@ import {
   Icon,
   Right,
   Animated,
-  TouchableOpacity  
+  TouchableOpacity
 } from 'react-native';
 import styles from './styles';
 import { categories } from '../../data/dataArrays';
@@ -27,7 +27,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 
 export default class CategoriesScreen extends React.Component {
-  
+
   static navigationOptions = ({ navigation }) => ({
     headerShown: false,
     title: 'Как сделать лизуна',
@@ -48,7 +48,7 @@ export default class CategoriesScreen extends React.Component {
     />,
   });
 
-  
+
 
 
 
@@ -56,32 +56,32 @@ export default class CategoriesScreen extends React.Component {
 
 
     super(props);
-    
+
     const categoriesArray = categories;
     const categoriesArrayLength = categoriesArray.length;
-    let defaultButtonStatesArray = [],pressedButtonStatesArray = [], currentButtonsState = []; 
+    let defaultButtonStatesArray = [], pressedButtonStatesArray = [], currentButtonsState = [];
     let itr;
-    let BlueScreenDefaultButtonState = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
-    let BlueScreenPressedButtonState = require('../../../assets/ButtonBackgroundImage/blue-btn-bg-pressed.png');
-    let PinktScreenDefaultButtonState = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
-    let PinkScreenPressedButtonState = require('../../../assets/ButtonBackgroundImage/pink-btn-bg-pressed.png');
-    let screenBackgroundImage = require('../../../assets/ScreenBackgroundImages/Categories/background-image.png');
+    const BlueScreenDefaultButtonState = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
+    const BlueScreenPressedButtonState = require('../../../assets/ButtonBackgroundImage/blue-btn-bg-pressed.png');
+    const PinktScreenDefaultButtonState = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
+    const PinkScreenPressedButtonState = require('../../../assets/ButtonBackgroundImage/pink-btn-bg-pressed.png');
+    const screenBackgroundImage = require('../../../assets/ScreenBackgroundImages/Categories/background-image.png');
 
     for (itr = 0; itr < categoriesArrayLength; itr++) {
 
-        if(itr % 2 == 0){
+      if (itr % 2 == 0) {
 
-          defaultButtonStatesArray[itr] = BlueScreenDefaultButtonState;
-          pressedButtonStatesArray[itr] = BlueScreenPressedButtonState;
-          currentButtonsState[itr] = BlueScreenDefaultButtonState;
+        defaultButtonStatesArray[itr] = BlueScreenDefaultButtonState;
+        pressedButtonStatesArray[itr] = BlueScreenPressedButtonState;
+        currentButtonsState[itr] = BlueScreenDefaultButtonState;
 
-        }else{
+      } else {
 
-          defaultButtonStatesArray[itr] = PinktScreenDefaultButtonState;
-          pressedButtonStatesArray[itr] = PinkScreenPressedButtonState;
-          currentButtonsState[itr] = PinktScreenDefaultButtonState;
+        defaultButtonStatesArray[itr] = PinktScreenDefaultButtonState;
+        pressedButtonStatesArray[itr] = PinkScreenPressedButtonState;
+        currentButtonsState[itr] = PinktScreenDefaultButtonState;
 
-        }
+      }
 
     }
 
@@ -101,10 +101,8 @@ export default class CategoriesScreen extends React.Component {
   }
 
   onPressCategory = item => {
-    //console.log(item);
     const title = item.name;
     const category = item;
-
     this.props.navigation.navigate('RecipesList', { category, title });
   };
 
@@ -119,44 +117,44 @@ export default class CategoriesScreen extends React.Component {
         marginRight: 30,
         elevation: 50,
       }}>
-          <TouchableHighlight 
-            underlayColor='rgba(105,105,105,0.9)' 
-            onPress={(e) => { 
-              
-              const module_this = this;
-              let currentButtonsState =  module_this.state.currentButtonsState;
-              currentButtonsState[index] = module_this.state.pressedButtonStatesArray[index];
+        <TouchableHighlight
+          underlayColor='rgba(105,105,105,0.9)'
+          onPress={(e) => {
+
+            const module_this = this;
+            let currentButtonsState = module_this.state.currentButtonsState;
+            currentButtonsState[index] = module_this.state.pressedButtonStatesArray[index];
+            module_this.setState({ currentButtonsState: currentButtonsState });
+
+            setTimeout(function run() {
+
+              currentButtonsState[index] = module_this.state.defaultButtonStatesArray[index];
               module_this.setState({ currentButtonsState: currentButtonsState });
 
-              setTimeout(function run() {
+              module_this.onPressCategory(item);
 
-                currentButtonsState[index] = module_this.state.defaultButtonStatesArray[index];
-                module_this.setState({ currentButtonsState: currentButtonsState });
-  
-                module_this.onPressCategory(item);
-  
-              }, 100);
+            }, 100);
 
 
-            }}
-           
-          >
-            <View >
-              <ImageBackground
-                imageStyle={{
-                  resizeMode: 'stretch'
-                }}
-                style={{
-                  flex: 1,
-                }}
-                source={(this.state.currentButtonsState[index])}
-              >
-                <View style={styles.categoriesItemContainer}>
-                  <Text style={styles.categoriesName}>{item.categories_screen_name}</Text>
-                </View>
-              </ImageBackground>
-            </View>
-          </TouchableHighlight>
+          }}
+
+        >
+          <View >
+            <ImageBackground
+              imageStyle={{
+                resizeMode: 'stretch'
+              }}
+              style={{
+                flex: 1,
+              }}
+              source={(this.state.currentButtonsState[index])}
+            >
+              <View style={styles.categoriesItemContainer}>
+                <Text style={styles.categoriesName}>{item.categories_screen_name}</Text>
+              </View>
+            </ImageBackground>
+          </View>
+        </TouchableHighlight>
 
       </View>
     </View>
