@@ -65,6 +65,7 @@ export default class CategoriesScreen extends React.Component {
     let BlueScreenPressedButtonState = require('../../../assets/ButtonBackgroundImage/blue-btn-bg-pressed.png');
     let PinktScreenDefaultButtonState = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
     let PinkScreenPressedButtonState = require('../../../assets/ButtonBackgroundImage/pink-btn-bg-pressed.png');
+    let screenBackgroundImage = require('../../../assets/ScreenBackgroundImages/Categories/background-image.png');
 
     for (itr = 0; itr < categoriesArrayLength; itr++) {
 
@@ -85,17 +86,13 @@ export default class CategoriesScreen extends React.Component {
     }
 
 
-    this.PinkButtonBgImage = PinktScreenDefaultButtonState;
-    this.PressedPinkButtonBgImage  = PinkScreenPressedButtonState;
-    this.BlueButtonBgImage = BlueScreenDefaultButtonState;
-    this.PressedBlueButtonBgImage  = BlueScreenPressedButtonState;
+
 
     this.state = {
-      firstButtonState: this.PinkButtonBgImage , 
-      secondButtonState: this.BlueButtonBgImage,
       currentButtonsState: currentButtonsState,
       defaultButtonStatesArray: defaultButtonStatesArray,
-      pressedButtonStatesArray: pressedButtonStatesArray
+      pressedButtonStatesArray: pressedButtonStatesArray,
+      screenBackgroundImage: screenBackgroundImage
     };
 
 
@@ -176,7 +173,7 @@ export default class CategoriesScreen extends React.Component {
             flex: 1,
             resizeMode: 'cover'
           }}
-          source={require('../../../assets/ScreenBackgroundImages/Categories/background-image.png')}
+          source={this.state.screenBackgroundImage}
         >
           <CustomHeader
             parent_title_name={'Как сделать лизуна'}
