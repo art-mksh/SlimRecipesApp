@@ -13,7 +13,7 @@ export default class BackButton extends React.Component {
     const FaIconsMargin = 0;
 
     return (
-      <TouchableHighlight onPress={this.props.onPress} style={styles.btnContainer}>
+      <TouchableHighlight  underlayColor='rgba(73,182,77,0.9)'  onPress={this.props.onPress} style={styles.btnContainer}>
         
             <FontAwesomeIcon  style={{color:'white', margin:FaIconsMargin,}} size={ FaIconsSize } icon={ faArrowLeft }  />
             

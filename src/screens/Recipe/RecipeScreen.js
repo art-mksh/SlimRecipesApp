@@ -123,9 +123,7 @@ export default class RecipeScreen extends React.Component {
                       carouselRef={this.slider1Ref}
                       tappableDots={!!this.slider1Ref}
                     />
-                    
                   </View>
-
                 <View style={styles.infoRecipeContainer}>
                   <View style={styles.infoContainer}>
                     <ViewIngredientsButton

@@ -99,7 +99,7 @@ export default class CategoriesScreen extends React.Component {
                  module_this.setState({ secondButtonState :  module_this.PressedBlueButtonBgImage });
                  setTimeout(function run() {
                    module_this.setState({ secondButtonState :  module_this.BlueButtonBgImage });
-                   module_this.onPressCategory(item)
+                   module_this.onPressCategory(item);
                  }, 100);
 
               }else{
@@ -107,7 +107,7 @@ export default class CategoriesScreen extends React.Component {
                module_this.setState({ firstButtonState :  module_this.PressedPinkButtonBgImage });
                setTimeout(function run() {
                  module_this.setState({ firstButtonState :  module_this.PinkButtonBgImage });
-                 module_this.onPressCategory(item)
+                 module_this.onPressCategory(item);
                }, 100);
 
 

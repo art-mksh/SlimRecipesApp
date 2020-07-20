@@ -7,11 +7,14 @@ export default class ViewIngredientsButton extends React.Component {
   render() {
     
     return (
-      <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' onPress={this.props.onPress}>
-        <View style={[styles.container, {backgroundColor: this.props.button_color}] }>
-          <Text style={styles.text}>Посмотреть ингредиенты</Text>
-        </View>
-      </TouchableHighlight>
+      <View style={{marginTop: 20,marginLeft: 10,
+        marginRight: 10,}}>
+        <TouchableHighlight underlayColor='rgba(73,182,77,0.9)' style={{borderRadius: 100}} onPress={this.props.onPress}>
+            <View style={[styles.container, {backgroundColor: this.props.button_color}] }>
+              <Text style={styles.text}>Посмотреть ингредиенты</Text>
+            </View>
+        </TouchableHighlight>
+      </View>
     );
   }
 }

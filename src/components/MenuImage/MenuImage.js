@@ -22,7 +22,7 @@ export default class MenuImage extends React.Component {
    const FaIconsMargin = 0;
 
     return (
-      <TouchableOpacity style={styles.headerButtonContainer} onPress={this.props.onPress}>
+      <TouchableOpacity underlayColor='rgba(73,182,77,0.9)' style={styles.headerButtonContainer} onPress={this.props.onPress}>
          
             <FontAwesomeIcon style={{color:'white', margin:FaIconsMargin}} size={ FaIconsSize } icon={ faBars } />
       </TouchableOpacity>
@@ -31,5 +31,6 @@ export default class MenuImage extends React.Component {
 }
 
 MenuImage.propTypes = {
-  onPress: PropTypes.func
+  onPress: PropTypes.func,
+  
 };
