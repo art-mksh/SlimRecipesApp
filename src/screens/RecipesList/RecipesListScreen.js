@@ -38,74 +38,35 @@ export default class RecipesListScreen extends React.Component {
   constructor(props) {
     super(props);
 
-    //const BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
-    //const PressedBlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg-pressed.png');
-
-    //const PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
-    //const PressedPinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg-pressed.png');
-
-    //const BlueBackgroundImage = require('../../../assets/ScreenBackgroundImages/background-image-5.png');
-    //const PinkBackgroundImage = require('../../../assets/ScreenBackgroundImages/background-image-3.png');
-
-    //this.BlueButtonBgImage = BlueButtonBgImage;
-    //this.PressedBlueButtonBgImage = PressedBlueButtonBgImage;
-
-    //this.PinkButtonBgImage = PinkButtonBgImage;
-    //this.PressedPinkButtonBgImage = PressedPinkButtonBgImage;
-
-    //this.BlueBackgroundImage = BlueBackgroundImage;
-    //this.PinkBackgroundImage = PinkBackgroundImage;
-
     const { navigation } = props;
     const item = navigation.getParam('category');
     const recipesArray = getRecipes(item.id);
     const recipeArrayLength = recipesArray.length;
-    console.log(recipeArrayLength);
 
-    let CurrentScreenDefaultButtonState, CurrentScreenPressedButtonState;
+    let CurrentScreenDefaultButtonState, CurrentScreenPressedButtonState, CurrentScreenBackgroundImage;
 
-    //this.props.navigation.state.params.title
-    //console.log(navigation.state.params.title);
+    if (typeof(navigation.state.params.title) !== 'undefined' && navigation.state.params.title === 'Виды слаймов') { 
 
-    if (navigation.state.params.title === 'Виды слаймов') { 
-
-      const BlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
-      const PressedBlueButtonBgImage = require('../../../assets/ButtonBackgroundImage/blue-btn-bg-pressed.png');
-      const PinkBackgroundImage = require('../../../assets/ScreenBackgroundImages/background-image-3.png');
-      
-      this.BlueButtonBgImage = BlueButtonBgImage;
-      this.PressedBlueButtonBgImage = PressedBlueButtonBgImage;
-
-      this.PinkBackgroundImage = PinkBackgroundImage;
-
-
-      CurrentScreenDefaultButtonState = BlueButtonBgImage;
-      CurrentScreenPressedButtonState = PressedBlueButtonBgImage;
-      
-      this.DefaultButtonImage = BlueButtonBgImage;
-      this.PressedButtonImage = PressedBlueButtonBgImage;
+      CurrentScreenDefaultButtonState = require('../../../assets/ButtonBackgroundImage/blue-btn-bg.png');
+      CurrentScreenPressedButtonState = require('../../../assets/ButtonBackgroundImage/blue-btn-bg-pressed.png');
+      CurrentScreenBackgroundImage = require('../../../assets/ScreenBackgroundImages/background-image-3.png');
 
     } else {
 
-      const PinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
-      const PressedPinkButtonBgImage = require('../../../assets/ButtonBackgroundImage/pink-btn-bg-pressed.png');
-      const BlueBackgroundImage = require('../../../assets/ScreenBackgroundImages/background-image-5.png');
-
-      this.BlueBackgroundImage = BlueBackgroundImage;
-      this.PinkButtonBgImage = PinkButtonBgImage;
-
-      this.PressedPinkButtonBgImage = PressedPinkButtonBgImage;
-
-      CurrentScreenDefaultButtonState = PinkButtonBgImage;
-      CurrentScreenPressedButtonState = PressedPinkButtonBgImage;
-
-      this.DefaultButtonImage = PinkButtonBgImage;
-      this.PressedButtonImage = PressedPinkButtonBgImage;
+      CurrentScreenDefaultButtonState = require('../../../assets/ButtonBackgroundImage/pink-btn-bg.png');
+      CurrentScreenPressedButtonState = require('../../../assets/ButtonBackgroundImage/pink-btn-bg-pressed.png');
+      CurrentScreenBackgroundImage = require('../../../assets/ScreenBackgroundImages/background-image-5.png');
 
     }
 
+
+    this.DefaultButtonImage = CurrentScreenDefaultButtonState;
+    this.PressedButtonImage = CurrentScreenPressedButtonState;
+    this.ScreenDefaultBackgroundImage = CurrentScreenBackgroundImage;
+
     let buttonStatesArray = [];
     let itr;
+
     for (itr = 0; itr < recipeArrayLength; itr++) {
       buttonStatesArray[itr] = CurrentScreenDefaultButtonState;
     }
@@ -113,6 +74,7 @@ export default class RecipesListScreen extends React.Component {
     this.state = {
       buttonStatesArray: buttonStatesArray,
     };
+
   }
 
   onPressRecipe = item => {
@@ -159,9 +121,6 @@ export default class RecipesListScreen extends React.Component {
             style={{
               flex: 1,
             }}
-            //source={(index % 2 == 0 ? (this.state.secondButtonState) : (this.state.firstButtonState))}
-            //source={(this.props.navigation.state.params.title === 'Виды слаймов' ? (this.state.secondButtonState) : (this.state.firstButtonState))}
-          //source={(this.props.navigation.state.params.title  === 'Виды слаймов' ?  this.BlueButtonBgImage :this.PinkButtonBgImage)}
           source={(this.state.buttonStatesArray[index])}
           >
             <View style={styles.container}>
@@ -187,7 +146,7 @@ export default class RecipesListScreen extends React.Component {
             flex: 1,
             resizeMode: 'cover'
           }}
-          source={(this.props.navigation.state.params.title === 'Виды слаймов' ? this.PinkBackgroundImage : this.BlueBackgroundImage)}
+          source={(this.ScreenDefaultBackgroundImage)}
         >
           <CustomHeader
             parent_title_name={navigation.getParam('title')}
