@@ -540,3 +540,11 @@ export const ingredients = [
       'http://images.media-allrecipes.com/userphotos/960x960/3758635.jpg'
   },
 ];
+
+
+export const instructions = {
+  'rus':'texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext'
+
+
+
+}

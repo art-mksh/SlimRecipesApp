@@ -15,6 +15,7 @@ import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { getIngredientName, getCategoryName, getCategoryById } from '../../data/MockDataAPI';
 import BackButton from '../../components/BackButton/BackButton';
 import ViewIngredientsButton from '../../components/ViewIngredientsButton/ViewIngredientsButton';
+import ViewInstructionButton from '../../components/ViewInstructionButton/ViewInstructionButton';
 import CustomHeader from '../../components/CustomHeader/CustomHeader';
 
 const { width: viewportWidth,height: viewportHeight  } = Dimensions.get('window');
@@ -148,6 +149,30 @@ export default class RecipeScreen extends React.Component {
                   </View>
                 <View style={styles.infoRecipeContainer}>
                   <View style={styles.infoContainer}>
+                    <ViewInstructionButton
+                      onPress={() => {
+
+                        const module_this = this;
+
+                        let currentButtonStateColor = module_this.currentButtonStateColor;
+            
+                        currentButtonStateColor = this.currentPressedButtonColor;
+                        module_this.setState({ currentButtonStateColor: currentButtonStateColor });
+            
+                        setTimeout(function run() {
+            
+                          currentButtonStateColor = module_this.currentDefaultButtonColor;
+            
+                          module_this.setState({ currentButtonStateColor: currentButtonStateColor });
+          
+                          navigation.navigate('Instructions');
+            
+                        }, 100);
+
+
+                      }}
+                      button_color={(this.state.currentButtonStateColor)}
+                    />
                     <ViewIngredientsButton
                       onPress={() => {
 

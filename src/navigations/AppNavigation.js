@@ -17,6 +17,7 @@ import RecipesListScreen from '../screens/RecipesList/RecipesListScreen';
 import IngredientScreen from '../screens/Ingredient/IngredientScreen';
 import SearchScreen from '../screens/Search/SearchScreen';
 import IngredientsDetailsScreen from '../screens/IngredientsDetails/IngredientsDetailsScreen';
+import InstructionsScreen from '../screens/Instructions/InstructionsScreen';
 
 /* (END) SCREENS */
 
@@ -42,6 +43,7 @@ const MainNavigator = createStackNavigator(
     Ingredient:  IngredientScreen,  
     Search:SearchScreen, 
     IngredientsDetails: IngredientsDetailsScreen,
+    Instructions: InstructionsScreen,
   },
   {
     //initialRouteName: 'Home',
