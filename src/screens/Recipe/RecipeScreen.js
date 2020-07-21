@@ -46,23 +46,65 @@ export default class RecipeScreen extends React.Component {
     const PinkBackgroundImage = require('../../../assets/ScreenBackgroundImages/background-image-8.png');
     const BlueBackgroundImage = require('../../../assets/ScreenBackgroundImages/background-image-9.png');
 
-    let currentPressedButtonColor, currentDefaultButtonColor,currentScreenBackgroundImage;
+    let 
+        currentPressedButtonColor, 
+        currentDefaultButtonColor,
+        currentScreenBackgroundImage, 
+        ViewIngredientsDefaultButtonColor,
+        ViewInstructionDefaultButtonColor,
+        ViewIngredientsPressedButtonColor,
+        ViewInstructionPressedButtonColor
+    ;
+    
+
+    let DefaultBlueButtonColor = "rgba(255, 94, 199, 1)";
+    let PressedBlueButtonColor = "rgba(255, 94, 199, 0.8)";
+
+    let DefaultPinkButtonColor = "rgba(1, 137, 215, 1)";
+    let PressedPinkButtonColor = "rgba(1, 137, 215, 0.8)";
+
+
 
     if(category.id == 3){
       currentPressedButtonColor = "rgba(255, 94, 199, 0.8)";
       currentDefaultButtonColor = "rgba(255, 94, 199, 1)";
       currentScreenBackgroundImage = PinkBackgroundImage;
+
+      ViewIngredientsDefaultButtonColor = DefaultPinkButtonColor;
+      ViewInstructionDefaultButtonColor = DefaultBlueButtonColor;
+
+      ViewIngredientsPressedButtonColor = PressedPinkButtonColor;
+      ViewInstructionPressedButtonColor = PressedBlueButtonColor;
+
     }else{
       currentPressedButtonColor = "rgba(1, 137, 215, 0.8)";
       currentDefaultButtonColor = "rgba(1, 137, 215, 1)";
       currentScreenBackgroundImage = BlueBackgroundImage;
+
+      ViewIngredientsDefaultButtonColor = DefaultBlueButtonColor;
+      ViewInstructionDefaultButtonColor = DefaultPinkButtonColor;
+
+      ViewIngredientsPressedButtonColor = PressedBlueButtonColor;
+      ViewInstructionPressedButtonColor = PressedPinkButtonColor;
     }
 
     this.currentPressedButtonColor = currentPressedButtonColor;
     this.currentDefaultButtonColor = currentDefaultButtonColor;
     this.currentScreenBackgroundImage = currentScreenBackgroundImage;
 
+
+    
+    this.currentDefaultViewIngredientsButton = ViewIngredientsDefaultButtonColor;
+    this.currentPressedViewIngredientsButton = ViewIngredientsPressedButtonColor;
+
+    this.currentDefaultViewInstructionButton = ViewInstructionDefaultButtonColor;
+    this.currentPressedViewInstructionButton = ViewInstructionPressedButtonColor;
+
+
+
     this.state = {
+      viewIngredientsButton: ViewIngredientsDefaultButtonColor,
+      viewInstructionButton: ViewInstructionDefaultButtonColor,
       currentButtonStateColor : currentDefaultButtonColor
     }
 
@@ -154,16 +196,16 @@ export default class RecipeScreen extends React.Component {
 
                         const module_this = this;
 
-                        let currentButtonStateColor = module_this.currentButtonStateColor;
+                        let currentButtonStateColor = module_this.viewInstructionButton;
             
-                        currentButtonStateColor = this.currentPressedButtonColor;
-                        module_this.setState({ currentButtonStateColor: currentButtonStateColor });
+                        currentButtonStateColor = this.currentPressedViewInstructionButton;
+                        module_this.setState({ viewInstructionButton: currentButtonStateColor });
             
                         setTimeout(function run() {
             
-                          currentButtonStateColor = module_this.currentDefaultButtonColor;
+                          currentButtonStateColor = module_this.currentDefaultViewInstructionButton;
             
-                          module_this.setState({ currentButtonStateColor: currentButtonStateColor });
+                          module_this.setState({ viewInstructionButton: currentButtonStateColor });
           
                           navigation.navigate('Instructions');
             
@@ -171,23 +213,23 @@ export default class RecipeScreen extends React.Component {
 
 
                       }}
-                      button_color={(this.state.currentButtonStateColor)}
+                      button_color={(this.state.viewInstructionButton)}
                     />
                     <ViewIngredientsButton
                       onPress={() => {
 
                         const module_this = this;
 
-                        let currentButtonStateColor = module_this.currentButtonStateColor;
+                        let currentIngredientsButtonStateColor = module_this.viewIngredientsButton;
             
-                        currentButtonStateColor = this.currentPressedButtonColor;
-                        module_this.setState({ currentButtonStateColor: currentButtonStateColor });
+                        currentIngredientsButtonStateColor = this.currentPressedViewIngredientsButton;
+                        module_this.setState({ viewIngredientsButton: currentIngredientsButtonStateColor });
             
                         setTimeout(function run() {
             
-                          currentButtonStateColor = module_this.currentDefaultButtonColor;
+                          currentIngredientsButtonStateColor = module_this.currentDefaultViewIngredientsButton;
             
-                          module_this.setState({ currentButtonStateColor: currentButtonStateColor });
+                          module_this.setState({ viewIngredientsButton: currentIngredientsButtonStateColor });
             
                           let ingredients = item.ingredients;
                           let title = 'Ingredients for ' + item.title;
@@ -198,7 +240,7 @@ export default class RecipeScreen extends React.Component {
 
 
                       }}
-                      button_color={(this.state.currentButtonStateColor)}
+                      button_color={(this.state.viewIngredientsButton)}
                     />
                   </View>
                   <View style={styles.infoContainer}>
