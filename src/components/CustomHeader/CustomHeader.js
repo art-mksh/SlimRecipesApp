@@ -33,6 +33,8 @@ export default class CustomHeader extends React.Component {
       this.props.parent_navigation.state.routeName ===  'Recipe'
       ||
       this.props.parent_navigation.state.routeName ==='Search'
+      ||
+      this.props.parent_navigation.state.routeName ==='Instructions'
     ) {
       LeftCustomComponent = (
         <BackButton
