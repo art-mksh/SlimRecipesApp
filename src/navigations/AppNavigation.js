@@ -1,11 +1,6 @@
 import { createAppContainer } from 'react-navigation';
 import {createDrawerNavigator} from 'react-navigation-drawer'
 import {createStackNavigator} from 'react-navigation-stack'
-/* import React from 'react'
-import {createStackNavigator} from '@react-navigation/stack'
-import {NavigationContainer} from '@react-navigation/native'
-import {createDrawerNavigator} from '@react-navigation/drawer' */
-
 
 
 /* SCREENS */
@@ -24,15 +19,10 @@ import InstructionsScreen from '../screens/Instructions/InstructionsScreen';
 
 /* COMPONENTS */
 
-//import CustomHeader from '../components/CustomHeader/CustomHeader';
 import DrawerContainer from '../screens/DrawerContainer/DrawerContainer';
 
 /* (END) COMPONENTS */
 
-//import React from 'react';
-//import { TouchableHighlight, Image, Text, View } from 'react-native';
-
-//import { StyleSheet } from 'react-native';
 
 const MainNavigator = createStackNavigator(
   {

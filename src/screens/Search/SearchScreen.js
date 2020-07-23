@@ -58,6 +58,8 @@ export default class SearchScreen extends React.Component {
       //value={navigation.state.data}
     />);
 
+    this.SrchBr = SrchBr;
+
 
     return {
       headerShown: false,

@@ -49,7 +49,8 @@ export default class CustomHeader extends React.Component {
                                         }} 
                               />;
     } else {
-      LeftCustomComponent = <MenuImage onPress={() => { 
+      LeftCustomComponent = <MenuImage 
+                                        onPress={() => { 
                                           this.props.parent_navigation.openDrawer(); 
                                         }} 
                               />;

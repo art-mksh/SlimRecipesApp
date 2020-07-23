@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+//import { StyleSheet, Text, View } from 'react-native';
 import AppContainer from './src/navigations/AppNavigation';
 
 import * as Font from 'expo-font';
@@ -24,19 +24,11 @@ export default function App() {
       <AppLoading
         startAsync={loadAppAplication}
         onFinish={()=> setDataLoaded(true)}
+        //onFinish={()=> setDataLoaded(false)}
       />
     )
   }
 
-
-  /*
-  return (
-    <View>
-    <Text style={{fontFamily:'Roboto-Italic'}}>аааа</Text>
-     <AppContainer />
-     </View>
-  );
-  */
 
  return (
    <AppContainer />
