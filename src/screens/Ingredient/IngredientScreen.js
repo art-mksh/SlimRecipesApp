@@ -66,7 +66,10 @@ export default class IngredientScreen extends React.Component {
               parent_navigation={this.props.navigation} 
         />
           <View style={{ borderBottomWidth: 0.4, marginBottom: 10, borderBottomColor: 'grey' }}>
-                <Image style={styles.photoIngredient} source={{ uri: '' + ingredientUrl }} />
+                <Image 
+                      style={styles.photoIngredient} 
+                      source={ingredientUrl} 
+                />
               </View>
               <Text style={styles.ingredientInfo}>Рецепты с {ingredientName}:</Text>
               <View style={{ flex: 1}}>

@@ -1,10 +1,17 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet,Dimensions } from 'react-native';
+var {height, width} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     height: 50,
-    width: 270,
+
+
+    //width: 270,
+    width: width/2.2,
+
+
+
     //marginTop: 20,
     //marginLeft: 10,
     //marginRight: 10,
@@ -19,6 +26,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     fontWeight:"bold",
+    textAlign:"center",
     //color: '#2cd18a'
     color: 'white'
   }

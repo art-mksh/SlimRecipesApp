@@ -66,6 +66,8 @@ export default class CustomHeader extends React.Component {
 
       let HeaderTitleName,CenterComponentTextColor;
 
+      //console.log(this.props.parent_navigation.state.params);
+
       if(this.props.parent_navigation.state.routeName === 'Recipe'){
         HeaderTitleName = this.props.parent_navigation.state.params.item.title;
       }else if(this.props.parent_navigation.state.routeName === 'Ingredient'){
@@ -90,19 +92,41 @@ export default class CustomHeader extends React.Component {
       }
 
       CenterCustomComponent = 
-      (<Text style={{
-        //color: '#ff4ebd', 
-        color: CenterComponentTextColor, 
-        fontSize: 29, 
-        shadowColor: "black",
-        fontFamily:'GUERRILLA-Normal',
-        shadowOffset: {
-          height: 1, width: 1
-        },
-        shadowRadius: 3
-      }}>
-        {HeaderTitleName}
-      </Text>);
+      (<View
+          style={{
+
+            //textAlign:'center',
+            //flexWrap:'wrap',
+
+            //textAlignVertical:'bottom',
+
+            //flexWrap: 'nowrap',
+            //flexShrink: 1,
+            //flexDirection:'row',
+          }}
+        >
+          <Text style={{
+          //color: '#ff4ebd', 
+          color: CenterComponentTextColor, 
+          fontSize: 29, 
+          shadowColor: "black",
+          fontFamily:'GUERRILLA-Normal',
+          textAlign:'center',
+          //flexWrap:'wrap',
+          //textAlignVertical:'bottom',
+
+          //flexWrap: 'nowrap',
+          //flexShrink: 1,
+          //flexDirection:'row',
+
+          shadowOffset: {
+            height: 1, width: 1
+          },
+          shadowRadius: 3
+        }}>
+          {HeaderTitleName}
+        </Text>
+      </View>);
     }
 
     return (

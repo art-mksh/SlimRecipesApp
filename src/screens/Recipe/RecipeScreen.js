@@ -234,7 +234,7 @@ export default class RecipeScreen extends React.Component {
                           module_this.setState({ viewIngredientsButton: currentIngredientsButtonStateColor });
             
                           let ingredients = item.ingredients;
-                          let title = 'Ingredients for ' + item.title;
+                          let title = 'Ингредиенты рецепта';
 
                           navigation.navigate('IngredientsDetails', { ingredients, title });
             

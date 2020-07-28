@@ -55,6 +55,9 @@ export default class IngredientsDetailsScreen extends React.Component {
     const item = navigation.getParam('ingredients');
     const ingredientsArray = getAllIngredients(item);
 
+    //console.log(item);
+    //console.log(ingredientsArray);
+
     return (
       <View style={{ flex: 1 }}>
 

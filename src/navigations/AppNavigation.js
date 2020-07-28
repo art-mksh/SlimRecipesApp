@@ -16,7 +16,6 @@ import InstructionsScreen from '../screens/Instructions/InstructionsScreen';
 
 /* (END) SCREENS */
 
-
 /* COMPONENTS */
 
 import DrawerContainer from '../screens/DrawerContainer/DrawerContainer';
@@ -66,4 +65,4 @@ const DrawerStack = createDrawerNavigator(
  
 export default AppContainer = createAppContainer(DrawerStack);
 
-console.disableYellowBox = true;
+//console.disableYellowBox = true;
