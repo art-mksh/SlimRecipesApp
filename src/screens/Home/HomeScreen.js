@@ -107,6 +107,13 @@ export default class HomeScreen extends React.Component {
               data={recipes}
               renderItem={this.renderRecipes}
               keyExtractor={item => `${item.recipeId}`}
+              contentContainerStyle={{
+                paddingTop: 10,
+                //width:100
+                //marginBottom:50
+                paddingBottom:150
+              
+              }}
 
             />
           </View>

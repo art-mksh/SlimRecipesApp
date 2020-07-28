@@ -85,7 +85,6 @@ export default class RecipesListScreen extends React.Component {
 
 
   renderRecipes = ({ item, index }) => (
-    <View>
       <View style={{
         flex: 1,
         marginTop: 20,
@@ -129,7 +128,6 @@ export default class RecipesListScreen extends React.Component {
           </ImageBackground>
         </TouchableHighlight>
       </View>
-    </View>
   );
 
   render() {
@@ -160,7 +158,14 @@ export default class RecipesListScreen extends React.Component {
               data={recipesArray}
               renderItem={this.renderRecipes}
               keyExtractor={item => `${item.recipeId}`}
-              style={{ paddingTop: 30 }}
+              contentContainerStyle={{
+                paddingTop: 10,
+                //width:100
+                //marginBottom:50
+                paddingBottom:150
+              
+              }}
+             
             />
           </View>
         </ ImageBackground>

@@ -115,7 +115,7 @@ export default class RecipeScreen extends React.Component {
   renderImage = ({ item }) => (
     <TouchableHighlight>
       <View style={styles.imageContainer}>
-        <Image style={styles.image} source={{ uri: item }} />
+        <Image style={styles.image} source={ item } />
       </View>
     </TouchableHighlight>
   );
@@ -133,6 +133,7 @@ export default class RecipeScreen extends React.Component {
     const { navigation } = this.props;
     const item = navigation.getParam('item');
     const category = getCategoryById(item.categoryId);
+
 
     return (
       <ScrollView style={styles.container}>

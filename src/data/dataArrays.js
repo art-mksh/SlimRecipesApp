@@ -23,13 +23,13 @@ export const recipes = [
     recipeId: 1,
     categoryId: 3,
     title: 'Clear слайм',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
     ingredients: [[1, '200 мл'], [2, '250 мл'], [3, '2 чайные ложки']],
@@ -40,16 +40,16 @@ export const recipes = [
     recipeId: 2,
     categoryId: 3,
     title: 'Оригинальный слайм',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
-    ingredients: [[4, '100 мл'], [5, ''], [6, '2 столовые ложки'], [7, '1 чайная ложка тетрабората с 150 мл воды']],
+    ingredients: [[4, '100 мл'], [5, ''], [6, '2 столовые ложки'],[7, '1 чайная ложка '],[2, '150 мл воды']],
     description:
       `1. Делаем активатор, смешиваем примерно 1 ч.л. тетрабората и 50мл. воды. \n\n 2. В чистой таре смешиваем клей и краситель. \n\n 3. Добавляем крем и перемешиваем. \n\n 4. В конце добавляем активатор, постепенно и понемногу, постоянно и долго вымешиваем наш слайм, пока он не будет готов. \n`
   },
@@ -57,16 +57,16 @@ export const recipes = [
     recipeId: 3,
     categoryId: 3,
     title: 'Глянцевый слайм',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
-    ingredients: [[4, '100 мл'], [6, '2 столовые ложки'], [8, '1 чайная ложка'], [5, ''], [7, '1 чайная ложка тетрабората с 50 мл воды']],
+    ingredients: [[4, '100 мл'], [6, '2 столовые ложки'], [8, '1 чайная ложка'], [5, ''], [7, '1 чайная ложка '],[2, '150 мл воды']],
     description:
       `Глянцевый слайм отличается гладкостью и красивым блеском от других слаймов. Очень хорошо тянется и не липнет к рукам. \n\n 1. Делаем активатор, смешиваем примерно 1 ч.л. тетрабората и 50мл. воды. \n\n 2. В чистой емкости смешиваем клей и краситель. \n\n 3. Добавляем крем и масло, тщательно вымешиваем. \n\n 4. В конце добавляем активатор, постепенно и понемногу, постоянно и долго вымешиваем наш слайм, пока он не будет готов. \n\n 5. Если слайм плохо тянется или недостаточно блистит, можно добавить еще масла и крема, но понемногу.`
   },
@@ -74,13 +74,13 @@ export const recipes = [
     recipeId: 4,
     categoryId: 3,
     title: 'Снежный слайм',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
     ingredients: [[4, '50 мл'], [3, '1 чайная ложка'], [2, '50 мл'], [5, ''], [8, '']],
@@ -91,16 +91,16 @@ export const recipes = [
     recipeId: 5,
     categoryId: 3,
     title: 'Слайм с губкой',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
-    ingredients: [[4, '100 мл'], [7, '1 чайная ложка тетрабората с 150 мл воды'], [9, '50 мл'], [5, '']],
+    ingredients: [[4, '100 мл'], [7, '1 чайная ложка '],[2, '150 мл воды'], [9, '50 мл'], [5, '']],
     description:
       `Лизун с добавлением губки очень прикольный в игре и хрустящий. Губку можно использовать обычную, меламиновую или флористическую, с каждой будет разный эффект, попробуйте все. Губка предварительно нарезается на квадратики или прямоугольники небольшого размера. \n\n 1. Как обычно делаем активатор, смешиваем примерно 1 ч.л. тетрабората и 50мл. воды. \n\n 2. Вливаем клей в чистую ёмкость, добавляем краситель по желанию, перемешиваем. \n\n 3. Добавляем наш активатор, постепенно и понемногу, постоянно и долго вымешиваем наш слайм, пока он не будет готов. \n\n 4. Добавляем кусочки, предварительно нарезанной губки. Очень много добавлять не нужно. т\n\n 5. Наслаждаемся слаймом.`
   },
@@ -108,16 +108,16 @@ export const recipes = [
     recipeId: 6,
     categoryId: 3,
     title: 'Баттер слайм',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
-    ingredients: [[4, '100 мл'], [5, ''], [6, '2 столовые ложки'], [7, '1 чайная ложка тетрабората с 150 мл воды']],
+    ingredients: [[4, '100 мл'], [5, ''], [6, '2 столовые ложки'], [7, '1 чайная ложка '],[2, '150 мл воды']],
     description:
       `Переводится как слайм масло, тающий, но очень воздушный лизун, имеет более матовую структуру. Этот лизун интересно растекается по поверхности как масло, благодаря легкой глине или по-другому лёгкий пластилин. Сначала делаем ориджинал слайм, затем добавляем пластилин. \n\n 1. Делаем активатор, смешиваем примерно 1 ч.л. тетрабората и 50мл. воды.\n\n 2. В чистой таре смешиваем клей и краситель. \n\n 3. Добавляем крем и перемешиваем.\n\n 4. В конце добавляем активатор, постепенно и понемногу, постоянно и долго вымешиваем наш слайм. \n\n 5. Когда слайм будет готов, добавляем легкую глину или легкий пластилин, вымешиваем до однородности.`
   },
@@ -125,16 +125,16 @@ export const recipes = [
     recipeId: 7,
     categoryId: 3,
     title: 'Флаффи слайм',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
-    ingredients: [[4, '100 мл'], [5, ''], [6, '2 столовые ложки'],[10, ''],[6, ''], [7, '1 чайная ложка тетрабората с 150 мл воды']],
+    ingredients: [[4, '100 мл'], [5, ''], [6, '2 столовые ложки'],[10, ''],[6, ''],[7, '1 чайная ложка '],[2, '150 мл воды']],
     description:
       `Переводится с английского, как пушистый слайм. Еще называется лизун облако из-за своей воздушной текстуры, благодаря пене для бритья. \n\n 1. Делаем активатор, смешиваем примерно 1 ч. л. тетрабората и 50мл. воды. \n\n 2. В чистой таре смешиваем клей и краситель.  \n\n 3. Добавляем крем и перемешиваем. \n\n 4. Добавляем пену, количество по вашему желанию, перемешиваем. \n\n 5. В конце добавляем активатор, постепенно и понемногу, постоянно и долго вымешиваем наш слайм, пока он не будет готов.`
   },
@@ -142,16 +142,16 @@ export const recipes = [
     recipeId: 8,
     categoryId: 3,
     title: 'Песочный слайм',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
-    ingredients: [[1, '100 мл'], [11, '2 столовые ложки'], [12, ''],[7, '1 чайная ложка тетрабората с 150 мл воды']],
+    ingredients: [[1, '100 мл'], [11, '2 столовые ложки'], [12, ''],[7, '1 чайная ложка '],[2, '150 мл воды']],
     description:
       `Песочный лизун или сэнд слайм имеет очень приятную текстуру и крутой эффект антистресса. \n\n  1. Делаем активатор, смешиваем примерно 1 ч. л. тетрабората и 50мл. воды. \n\n 2. В чистой таре смешиваем клей и гель для душа, перемешиваем.  \n\n 3. Добавляем кинетический песок, смешиваем. \n\n 4. В конце добавляем активатор, постепенно и понемногу, постоянно и долго вымешиваем наш слайм, пока он не будет готов.`
   },
@@ -159,16 +159,16 @@ export const recipes = [
     recipeId: 9,
     categoryId: 3,
     title: 'Кранчи слайм',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
-    ingredients: [[4, '100 мл'], [13, '2 столовые ложки'], [10, '30 мл'], [14, ''],[7, '1 чайная ложка тетрабората с 150 мл воды']],
+    ingredients: [[4, '100 мл'], [13, '2 столовые ложки'], [10, '30 мл'], [14, ''],[7, '1 чайная ложка '],[2, '150 мл воды']],
     description:
       `Кранчи слайм - это лизун с множеством шариков, которые дают крутой расслабляющий эффект. Шарики можно использовать любые: стеклянные, пенопластовые, пластиковые или микробисер. Кстати микробисер даёт просто нереальный массажный эффект. А с пенопластовыми шариками слайм забавно хрустит. \n\n 1. Делаем активатор, смешиваем примерно 1 ч. л. тетрабората и 50мл. воды. \n\n 2. В чистой таре смешиваем клей, шампунь и пену, перемешиваем. \n\n 4. Добавляем активатор, постепенно и понемногу, постоянно и долго вымешиваем наш слайм, пока он не будет готов. \n\n 5. В конце добавляем наши шарики и играем с крутым слаймом.`
   },
@@ -176,16 +176,16 @@ export const recipes = [
     recipeId: 10,
     categoryId: 3,
     title: 'Айсберг слайм',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
-    ingredients: [[4, '100 мл'], [10, '40 мл'], [5, ''],[7, '1 чайная ложка тетрабората с 150 мл воды']],
+    ingredients: [[4, '100 мл'], [10, '40 мл'], [5, ''],[7, '1 чайная ложка '],[2, '150 мл воды']],
     description:
       `Айсберг слайм - это лизун, покрытый сверху твердой корочкой. Верхушка затвердевшего слайма прикольно хрустит и разламывается, как лёд, поэтому и такое название. \n\n 1. Делаем активатор, смешиваем примерно 1 ч. л. тетрабората и 50мл. воды. \n\n 2. В чистой таре смешиваем клей, краситель и пену, перемешиваем. Если хотите слайм более пышный, то добавьте еще пены.  \n\n 3. Добавляем активатор, постепенно и понемногу, постоянно и долго вымешиваем наш слайм, пока он не будет готов. \n\n 5. Кладем слайм в тару, но не закрываем крышкой и убираем в темное место на 12 часов, если слайм не застыл сверху, то оставьте его еще на день, пока он не засохнет сверху. Но помните, что от этого слайм высыхает и портится и вряд ли вы сможете потом играть с ним полноценно.`
   },
@@ -193,16 +193,16 @@ export const recipes = [
     recipeId: 11,
     categoryId: 3,
     title: 'Магнитный слайм',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
-    ingredients: [[4, '50 мл'],[7, '1 чайная ложка тетрабората с 150 мл воды'],[15, ''],[16, ''] ],
+    ingredients: [[4, '50 мл'],[7, '1 чайная ложка '],[2, '150 мл воды'],[15, ''],[16, ''] ],
     description:
       `Магнитный слайм имеет в своем составе магнитную стружку, поэтому с ним можно прикольно играть магнитом. \n\n 1. Делаем активатор, смешиваем примерно 1 ч. л. тетрабората и 50мл. воды.\n\n 2. В чистой таре смешиваем клей и магнитную стружку, перемешиваем. \n\n 3. Добавляем активатор, постепенно и понемногу, постоянно и долго вымешиваем наш слайм, пока он не будет готов. \n\n 4. Играйте готовым слаймом магнитом.`
   },
@@ -210,16 +210,16 @@ export const recipes = [
     recipeId: 12,
     categoryId: 3,
     title: 'Светящийся слайм',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
-    ingredients: [[1, '50 мл'],[17, ''],[7, '1 чайная ложка тетрабората с 150 мл воды']],
+    ingredients: [[1, '50 мл'],[17, ''],[7, '1 чайная ложка '],[2, '150 мл воды']],
     description:
       `Хотите лизуна, который светится? Это возможно, благодаря специальным красителям, которые вы можете купить в магазине канцтоваров или для творчества. Если вы хотите слайм, который светится в темноте, вам нужна люминесцентная краска, но этот слайм будет заряжаться на солнце, и только потом светиться в темноте. А если хотите, чтобы светился в ультрафиолете, то нужна флуоросцентная краска. \n\n 1. Делаем активатор, смешиваем примерно 1 ч. л. тетрабората и 50мл. воды. \n\n 2. В чистой таре смешиваем клей и краситель, перемешиваем. \n\n 3. Если хотите, чтобы слайм был более воздушный можно добавить немного пены для бритья. \n\n 4. Добавляем активатор, постепенно и понемногу, постоянно и долго вымешиваем наш слайм, пока он не будет готов. `
   },
@@ -227,13 +227,13 @@ export const recipes = [
     recipeId: 13,
     categoryId: 1,
     title: 'Без клея 1 рецепт',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
     ingredients: [[19, ''], [6, '4 чайные ложки'],[20, '3 чайные ложки'],[5, ''],[21, '']],
@@ -244,16 +244,16 @@ export const recipes = [
     recipeId: 14,
     categoryId: 1,
     title: 'С пеной',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
-    ingredients: [[7, '1 чайная ложка тетрабората с 150 мл воды'], [10, ''], [4, '60 мл'],[5, 'по желанию']],
+    ingredients: [[7, '1 чайная ложка '],[2, '150 мл воды'], [10, ''], [4, '60 мл'],[5, 'по желанию']],
     description:
       `1. Выливаем в чистую чашу клей. \n\n 2. обавляем пены сколько хотим и краситель, перемешиваем. \n\n 3. Загущаем слайм активатором понемногу, капаем активатор и тщательно вымешиваем слайм, если это нужно, то добавляем еще активатора.`
   },
@@ -261,16 +261,16 @@ export const recipes = [
     recipeId: 15,
     categoryId: 1,
     title: 'С кремом для рук',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
-    ingredients: [[7, '1 чайная ложка тетрабората с 150 мл воды'], [6, '2 чайные ложки'], [4, '60 мл'],[5, 'по желанию']],
+    ingredients: [[7, '1 чайная ложка '],[2, '150 мл воды'], [6, '2 чайные ложки'], [4, '60 мл'],[5, 'по желанию']],
     description:
       `1. Выливаем в чистую чашу клей. \n\n 2. Добавляем крем и краситель, перемешиваем.\n\n 3. Загущаем слайм активатором понемногу, капаем активатор и тщательно вымешиваем слайм, если это нужно, то добавляем еще активатора и снова мнем слайм.`
   },
@@ -278,16 +278,16 @@ export const recipes = [
     recipeId: 16,
     categoryId: 1,
     title: 'С детским маслом',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
-    ingredients: [[7, '1 чайная ложка тетрабората с 150 мл воды'], [21, '1 чайные ложки'], [4, '60 мл'],[5, 'по желанию']],
+    ingredients: [[7, '1 чайная ложка '],[2, '150 мл воды'], [21, '1 чайные ложки'], [4, '60 мл'],[5, 'по желанию']],
     description:
       `1. Выливаем в чистую чашу клей. \n\n 2. Добавляем масло и краситель, перемешиваем. \n\n 3. Загущаем слайм активатором понемногу, капаем активатор и тщательно вымешиваем слайм, если это нужно, то добавляем еще активатора и снова мнем слайм. \n\n 4. Если салйм слишком тугой, то добавьте еще масла.`
   },
@@ -295,16 +295,16 @@ export const recipes = [
     recipeId: 17,
     categoryId: 1,
     title: 'С жидким мылом',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
-    ingredients: [[7, '1 чайная ложка тетрабората с 150 мл воды'], [20, '2 чайные ложки'], [4, '60 мл'],[5, 'по желанию']],
+    ingredients: [[7, '1 чайная ложка '],[2, '150 мл воды'], [20, '2 чайные ложки'], [4, '60 мл'],[5, 'по желанию']],
     description:
       `1. Выливаем в чистую чашу клей. \n\n 2. Добавляем масло и краситель, перемешиваем. \n\n 3. Загущаем слайм активатором понемногу, капаем активатор и тщательно вымешиваем слайм, если это нужно, то добавляем еще активатора и снова мнем слайм. \n\n 4. Если салйм слишком тугой, то добавьте еще масла.`
   },
@@ -312,13 +312,13 @@ export const recipes = [
     recipeId: 18,
     categoryId: 1,
     title: 'С шампунем',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
     ingredients: [[13, 'прозрачный Пантил - 20 мл'], [18, '100 мл'], [22, '']],
@@ -329,13 +329,13 @@ export const recipes = [
     recipeId: 19,
     categoryId: 1,
     title: 'С содой',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
     ingredients: [[4, '60 мл'], [20, '1 столовая ложка'], [23, '']],
@@ -346,13 +346,13 @@ export const recipes = [
     recipeId: 20,
     categoryId: 1,
     title: 'С зубной пастой',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
     ingredients: [[4, '60 мл'], [24, 'Тюбик зубной пасты любой']],
@@ -363,13 +363,13 @@ export const recipes = [
     recipeId: 21,
     categoryId: 1,
     title: 'С солью',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
     ingredients: [[13, ''], [25, '']],
@@ -380,13 +380,13 @@ export const recipes = [
     recipeId: 22,
     categoryId: 1,
     title: 'С освежителем',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
     ingredients: [[4, '7 столовых ложек'], [5, 'по желанию'],[5, 'по желанию'] ],
@@ -397,13 +397,13 @@ export const recipes = [
     recipeId: 23,
     categoryId: 1,
     title: 'Без клея 2 рецепт',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
     ingredients: [[2, '100 мл'], [3, '1 чайная ложка'],[18, ''] ],
@@ -414,13 +414,13 @@ export const recipes = [
     recipeId: 24,
     categoryId: 1,
     title: 'С порошком',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
     ingredients: [[2, '60 мл'], [3, '1 столовая ложка'],[18, '1 чайная ложка(по мере необходимости)'] ],
@@ -431,13 +431,13 @@ export const recipes = [
     recipeId: 25,
     categoryId: 1,
     title: 'Без тетрабората',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
-      "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",
-      'https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.al.com/home/bama-media/width600/img/news_impact/photo/burger-fijpg-57e7e5907630c2ad.jpg',
-      'https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492718105/articles/2013/09/24/burger-king-s-new-french-fries-took-ten-years-to-develop/130923-gross-burger-tease_izz59e',
-      'https://aht.seriouseats.com/images/2012/02/20120221-193971-fast-food-fries-Burger-King-fries-2.jpg'
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg'),
+      require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
     ingredients: [[26, '2 чайные ложки'], [4, '4 столовая ложка'],[23, '1 щепотка'],[2, '1 чайная ложка'],[5, 'по желанию'] ],
@@ -479,7 +479,7 @@ export const ingredients = [
   },
   {
     ingredientId: 7,
-    name: 'Активатор',
+    name: 'Тетраборат',
     photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
   },
   {
@@ -576,7 +576,7 @@ export const ingredients = [
     ingredientId: 26,
     name: 'нафтизиин или левомицетин(или глазные капли с борной кислотой в составе)',
     photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
-  },
+  }
 ];
 
 
