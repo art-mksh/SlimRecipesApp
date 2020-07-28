@@ -39,7 +39,11 @@ export default class IngredientsDetailsScreen extends React.Component {
   renderIngredient = ({ item }) => (
     <TouchableHighlight underlayColor='rgba(220,220,220,0.9)' onPress={() => this.onPressIngredient(item[0])}>
       <View style={styles.container}>
-        <Image style={styles.photo} source={{ uri: item[0].photo_url }} />
+        <Image 
+          style={styles.photo} 
+          //source={{ uri: item[0].photo_url }} 
+          source={item[0].photo_url} 
+        />
         <Text style={styles.title}>{item[0].name}</Text>
         <Text style={{ color: 'grey' }}>{item[1]}</Text>
       </View>

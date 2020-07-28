@@ -23,16 +23,13 @@ export const recipes = [
     recipeId: 1,
     categoryId: 3,
     title: 'Clear слайм',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/clear-slime-1.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/clear-slime-1.jpg'),
+      require('../../assets/RecipesImages/clear-slime-2.jpg')
     ],
     time: '15',
-    ingredients: [[1, '200 мл'], [2, '250 мл'], [3, '2 чайные ложки']],
+    ingredients: [[1, '200 мл'], [2, '250 мл'], [7, '2 чайные ложки']],
     description:
       `Клиар слайм не имеет цвета, так как изготавливается из прозрачного клея.Его также называют кристаллом или стеклом, но чтобы он был действительно таковым, нужно выбрать хороший клей. \n\n Обратите внимание на прозрачные клеи фирм Brauberg, Erich krause, Elmers, Berlingo. Клей должен быть свежим, густым по консистенции. \n\n 1. Сначала нужно сделать активатор, для этого берем чистую чашу и смешиваем в ней тетраборат с водой. \n\n 2. Затем медленно вливаем наш клей. Делаем аккуратно, чтобы было как можно меньше пузырьков воздуха. Специальной ложечкой или лопаточкой медленно смешиваем клей и активатор, пока клей не свернется. \n\n 3. Затем лишнюю жидкость сливаем и радуемся готовому слайму. Если в нашем лизуне очень много пузырьков, то плотно закройте его в таре и уберите в холодильник на 2 суток. За это время часть пузырьков исчезнет и слайм станет более чистым. \n`
   },
@@ -40,13 +37,9 @@ export const recipes = [
     recipeId: 2,
     categoryId: 3,
     title: 'Оригинальный слайм',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/original-slime.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/original-slime.jpg')
     ],
     time: '15',
     ingredients: [[4, '100 мл'], [5, ''], [6, '2 столовые ложки'],[7, '1 чайная ложка '],[2, '150 мл воды']],
@@ -57,13 +50,9 @@ export const recipes = [
     recipeId: 3,
     categoryId: 3,
     title: 'Глянцевый слайм',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/glossy-slime.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/glossy-slime.jpg')
     ],
     time: '15',
     ingredients: [[4, '100 мл'], [6, '2 столовые ложки'], [8, '1 чайная ложка'], [5, ''], [7, '1 чайная ложка '],[2, '150 мл воды']],
@@ -74,13 +63,9 @@ export const recipes = [
     recipeId: 4,
     categoryId: 3,
     title: 'Снежный слайм',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/snow-slime.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/snow-slime.jpg')
     ],
     time: '15',
     ingredients: [[4, '50 мл'], [3, '1 чайная ложка'], [2, '50 мл'], [5, ''], [8, '']],
@@ -91,13 +76,9 @@ export const recipes = [
     recipeId: 5,
     categoryId: 3,
     title: 'Слайм с губкой',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/sponge-slime.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/sponge-slime.jpg')
     ],
     time: '15',
     ingredients: [[4, '100 мл'], [7, '1 чайная ложка '],[2, '150 мл воды'], [9, '50 мл'], [5, '']],
@@ -110,10 +91,6 @@ export const recipes = [
     title: 'Баттер слайм',
     photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
       require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
@@ -125,13 +102,9 @@ export const recipes = [
     recipeId: 7,
     categoryId: 3,
     title: 'Флаффи слайм',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/fluffy-slime.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/fluffy-slime.jpg')
     ],
     time: '15',
     ingredients: [[4, '100 мл'], [5, ''], [6, '2 столовые ложки'],[10, ''],[6, ''],[7, '1 чайная ложка '],[2, '150 мл воды']],
@@ -142,13 +115,11 @@ export const recipes = [
     recipeId: 8,
     categoryId: 3,
     title: 'Песочный слайм',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/sandy-slime.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/sandy-slime.jpg'),
+      require('../../assets/RecipesImages/sandy-slime-2.jpg'),
+      require('../../assets/RecipesImages/sandy-slime-3.jpg')
     ],
     time: '15',
     ingredients: [[1, '100 мл'], [11, '2 столовые ложки'], [12, ''],[7, '1 чайная ложка '],[2, '150 мл воды']],
@@ -159,13 +130,12 @@ export const recipes = [
     recipeId: 9,
     categoryId: 3,
     title: 'Кранчи слайм',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/crunchy-slime.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/crunchy-slime.jpg'),
+      require('../../assets/RecipesImages/crunchy-slime-2.jpg'),
+      require('../../assets/RecipesImages/crunchy-slime-3.jpg')
+
     ],
     time: '15',
     ingredients: [[4, '100 мл'], [13, '2 столовые ложки'], [10, '30 мл'], [14, ''],[7, '1 чайная ложка '],[2, '150 мл воды']],
@@ -176,13 +146,10 @@ export const recipes = [
     recipeId: 10,
     categoryId: 3,
     title: 'Айсберг слайм',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/iceberg-slime-1.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/iceberg-slime-1.jpg'),
+      require('../../assets/RecipesImages/iceberg-slime-2.jpg')
     ],
     time: '15',
     ingredients: [[4, '100 мл'], [10, '40 мл'], [5, ''],[7, '1 чайная ложка '],[2, '150 мл воды']],
@@ -193,13 +160,9 @@ export const recipes = [
     recipeId: 11,
     categoryId: 3,
     title: 'Магнитный слайм',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/magnit-slime.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/magnit-slime.jpg')
     ],
     time: '15',
     ingredients: [[4, '50 мл'],[7, '1 чайная ложка '],[2, '150 мл воды'],[15, ''],[16, ''] ],
@@ -210,13 +173,9 @@ export const recipes = [
     recipeId: 12,
     categoryId: 3,
     title: 'Светящийся слайм',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/glowing-slime.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/glowing-slime.jpg')
     ],
     time: '15',
     ingredients: [[1, '50 мл'],[17, ''],[7, '1 чайная ложка '],[2, '150 мл воды']],
@@ -227,13 +186,9 @@ export const recipes = [
     recipeId: 13,
     categoryId: 1,
     title: 'Без клея 1 рецепт',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/random-slime-1.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/random-slime-1.jpg')
     ],
     time: '15',
     ingredients: [[19, ''], [6, '4 чайные ложки'],[20, '3 чайные ложки'],[5, ''],[21, '']],
@@ -244,13 +199,9 @@ export const recipes = [
     recipeId: 14,
     categoryId: 1,
     title: 'С пеной',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/fluffy-slime.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/fluffy-slime.jpg')
     ],
     time: '15',
     ingredients: [[7, '1 чайная ложка '],[2, '150 мл воды'], [10, ''], [4, '60 мл'],[5, 'по желанию']],
@@ -261,13 +212,9 @@ export const recipes = [
     recipeId: 15,
     categoryId: 1,
     title: 'С кремом для рук',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/random-slime-2.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/random-slime-2.jpg')
     ],
     time: '15',
     ingredients: [[7, '1 чайная ложка '],[2, '150 мл воды'], [6, '2 чайные ложки'], [4, '60 мл'],[5, 'по желанию']],
@@ -278,13 +225,9 @@ export const recipes = [
     recipeId: 16,
     categoryId: 1,
     title: 'С детским маслом',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/random-slime-3.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/random-slime-3.jpg')
     ],
     time: '15',
     ingredients: [[7, '1 чайная ложка '],[2, '150 мл воды'], [21, '1 чайные ложки'], [4, '60 мл'],[5, 'по желанию']],
@@ -295,13 +238,9 @@ export const recipes = [
     recipeId: 17,
     categoryId: 1,
     title: 'С жидким мылом',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/random-slime-4.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/random-slime-4.jpg')
     ],
     time: '15',
     ingredients: [[7, '1 чайная ложка '],[2, '150 мл воды'], [20, '2 чайные ложки'], [4, '60 мл'],[5, 'по желанию']],
@@ -312,13 +251,9 @@ export const recipes = [
     recipeId: 18,
     categoryId: 1,
     title: 'С шампунем',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/random-slime-5.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/random-slime-5.jpg')
     ],
     time: '15',
     ingredients: [[13, 'прозрачный Пантил - 20 мл'], [18, '100 мл'], [22, '']],
@@ -331,10 +266,6 @@ export const recipes = [
     title: 'С содой',
     photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
       require('../../assets/RecipesImages/butter-slime-min.jpg')
     ],
     time: '15',
@@ -346,13 +277,9 @@ export const recipes = [
     recipeId: 20,
     categoryId: 1,
     title: 'С зубной пастой',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/iceberg-slime-2.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/iceberg-slime-2.jpg')
     ],
     time: '15',
     ingredients: [[4, '60 мл'], [24, 'Тюбик зубной пасты любой']],
@@ -363,13 +290,9 @@ export const recipes = [
     recipeId: 21,
     categoryId: 1,
     title: 'С солью',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/snow-slime.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/snow-slime.jpg')
     ],
     time: '15',
     ingredients: [[13, ''], [25, '']],
@@ -380,13 +303,9 @@ export const recipes = [
     recipeId: 22,
     categoryId: 1,
     title: 'С освежителем',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/sandy-slime-2.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/sandy-slime-2.jpg')
     ],
     time: '15',
     ingredients: [[4, '7 столовых ложек'], [5, 'по желанию'],[5, 'по желанию'] ],
@@ -397,16 +316,12 @@ export const recipes = [
     recipeId: 23,
     categoryId: 1,
     title: 'Без клея 2 рецепт',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/crunchy-slime-3.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/crunchy-slime-3.jpg')
     ],
     time: '15',
-    ingredients: [[2, '100 мл'], [3, '1 чайная ложка'],[18, ''] ],
+    ingredients: [[2, '100 мл'], [7, '1 чайная ложка'],[18, ''] ],
     description:
       `1. В чистой таре смешиваем воду и тетраборат. \n\n 2. Аккуратно добавляем маску-пленку, для начала добавьте 4 ст. л. или смотрите на глаз. Помните массу руками. \n\n 3. Достаньте готовый слайм и положите в сухую чашу, оставьте отдохнуть на 15 минут. Затем можно играть. \n\n 4. Если лизун жидкий, то добавьте еще тетрабората, разведенного с водой. Если слайм очень жесткий, добавьте еще воды.`
   },
@@ -414,16 +329,12 @@ export const recipes = [
     recipeId: 24,
     categoryId: 1,
     title: 'С порошком',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/crunchy-slime-2.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/crunchy-slime-2.jpg')
     ],
     time: '15',
-    ingredients: [[2, '60 мл'], [3, '1 столовая ложка'],[18, '1 чайная ложка(по мере необходимости)'] ],
+    ingredients: [[2, '60 мл'], [7, '1 столовая ложка'],[18, '1 чайная ложка(по мере необходимости)'] ],
     description:
       `1. В емкости хорошо размешиваем наш клей. \n\n 2. В него вливаем порошок и размешиваем до получения однородной массы. На этом этапе смесь становится гуще. Оставляем массу в холодильнике на 15 минут, а затем снова хорошо вымешиваем. \n\n 3. Если лизун продолжает липнуть к рукам, добавляем в массу 1 чайную ложку соды. Если слайм всё еще жидкий, в таком случае необходимо повторно ввести в массу гель для стирки и оставить субстанцию в холодильнике на 30 минут. Готовый слайм из стирального порошка немного напоминает эластичную резину.`
   },
@@ -431,13 +342,9 @@ export const recipes = [
     recipeId: 25,
     categoryId: 1,
     title: 'Без тетрабората',
-    photo_url: require('../../assets/RecipesImages/butter-slime-min.jpg'),
+    photo_url: require('../../assets/RecipesImages/1232-min.jpg'),
     photosArray: [
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg'),
-      require('../../assets/RecipesImages/butter-slime-min.jpg')
+      require('../../assets/RecipesImages/1232-min.jpg')
     ],
     time: '15',
     ingredients: [[26, '2 чайные ложки'], [4, '4 столовая ложка'],[23, '1 щепотка'],[2, '1 чайная ложка'],[5, 'по желанию'] ],
@@ -450,132 +357,132 @@ export const ingredients = [
   {
     ingredientId: 1,
     name: 'Канцелярский прозрачный клей',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/clay_transparent.png')
   },
   {
     ingredientId: 2,
     name: 'Вода',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/water.png')
   },
   {
     ingredientId: 3,
-    name: 'Тетраборат натрия',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    name: 'Тетраборат натрияx',
+    photo_url: require('../../assets/IngredientsImages/tetraborat.png')
   },
   {
     ingredientId: 4,
     name: 'Клей ПВА',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/clay_pwa.png')
   },
   {
     ingredientId: 5,
     name: 'Краситель',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/clay_transparent.png')
   },
   {
     ingredientId: 6,
     name: 'Крем для тела или для рук',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/dye.png')
   },
   {
     ingredientId: 7,
-    name: 'Тетраборат',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    name: 'Тетраборат натрия',
+    photo_url: require('../../assets/IngredientsImages/tetraborat.png')
   },
   {
     ingredientId: 8,
     name: 'Растущий снег или искусственный снег',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/snow.png')
   },
   {
     ingredientId: 9,
     name: 'Кусочки губки',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/sponge.jpg')
   },
   {
     ingredientId: 10,
     name: 'Пена для бритья',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/foam_pena.png')
   },
   {
     ingredientId: 11,
     name: 'Гель для душа или жидкое мыло',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/gel_dlya_dusha.png')
   },
   {
     ingredientId: 12,
     name: 'Кинетический песок',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/sand.jpg')
   },
   {
     ingredientId: 13,
     name: 'Шампунь',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/shampoo.png')
   },
   {
     ingredientId: 14,
     name: 'Шарики',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/balls.jpg')
   },
   {
     ingredientId: 15,
     name: 'Порошок оксида железа (по-другому магнитная стружка или железный порошок)',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/magnite_chip_struzhka.jpg')
   },  
   {
     ingredientId: 16,
     name: 'Магнит',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/magnit-min.jpg')
   },
   {
     ingredientId: 17,
     name: 'Люминесцентная краска',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/kraskalumino-min.jpg')
   },
   {
     ingredientId: 18,
     name: 'Маска-плёнка',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/maskaplenka-min.jpg')
   },
   {
     ingredientId: 19,
     name: 'Картофельный крахмал',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/krahmal-min.jpg')
   },
   {
     ingredientId: 20,
     name: 'Жидкое мыло',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/liquid_soup.png')
   },
   {
     ingredientId: 21,
     name: 'Детское масло',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/child_oil.png')
   },
   {
     ingredientId: 22,
     name: 'Жидкий порошок Персил или Perwoll',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/powder.png')
   },
   {
     ingredientId: 23,
     name: 'Пищевая сода',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/soda.jpg')
   },
   {
     ingredientId: 24,
     name: 'Зубная паста',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/toothpaste.png')
   },
   {
     ingredientId: 25,
     name: 'Соль',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    photo_url: require('../../assets/IngredientsImages/salt.png')
   },
   {
     ingredientId: 26,
-    name: 'нафтизиин или левомицетин(или глазные капли с борной кислотой в составе)',
-    photo_url: 'https://ak7.picdn.net/shutterstock/videos/27252067/thumb/11.jpg'
+    name: 'Нафтизиин или левомицетин(или глазные капли с борной кислотой в составе)',
+    photo_url: require('../../assets/IngredientsImages/naftizin-min.jpg')
   }
 ];
 

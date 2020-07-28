@@ -180,6 +180,7 @@ export default class RecipeScreen extends React.Component {
                     <Pagination
                       dotsLength={item.photosArray.length}
                       activeDotIndex={activeSlide}
+                      //activeDotIndex={0}
                       containerStyle={styles.paginationContainer}
                       dotColor="rgba(255, 255, 255, 0.92)"
                       dotStyle={styles.paginationDot}
