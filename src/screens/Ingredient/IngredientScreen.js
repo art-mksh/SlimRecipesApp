@@ -71,7 +71,7 @@ export default class IngredientScreen extends React.Component {
                       source={ingredientUrl} 
                 />
               </View>
-              <Text style={styles.ingredientInfo}>Рецепты с {ingredientName}:</Text>
+              <Text style={styles.ingredientInfo}>Рецепты с данным ингредиентом:</Text>
               <View style={{ flex: 1}}>
                 <FlatList
                   vertical

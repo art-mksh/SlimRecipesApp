@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   infoDescriptionRecipe: {
     textAlign: 'left',
-    fontSize: 18,
+    fontSize: 20,
     marginTop: 30,
     margin: 15,
     //fontWeight:10,

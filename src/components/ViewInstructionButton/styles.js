@@ -29,6 +29,14 @@ const styles = StyleSheet.create({
     textAlign:"center",
     //color: '#2cd18a'
     color: 'white'
+  },
+  textViewInstructionButton: {
+    fontSize: 20,
+    //fontWeight:"bold",
+    textAlign:"center",
+    //color: '#2cd18a'
+    color: 'white',
+    fontFamily:'GUERRILLA-Normal'
   }
 });
 

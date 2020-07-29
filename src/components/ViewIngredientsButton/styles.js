@@ -29,6 +29,14 @@ const styles = StyleSheet.create({
 
     //color: '#2cd18a'
     color: 'white'
+  },
+  textViewIngredientsButton: {
+    fontSize: 18,
+    //fontWeight:"bold",
+    textAlign:"center",
+    //color: '#2cd18a'
+    color: 'white',
+    fontFamily:'GUERRILLA-Normal'
   }
 });
 
