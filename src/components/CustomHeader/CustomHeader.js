@@ -1,6 +1,6 @@
 import React from 'react';
-import { TouchableHighlight, Image, Text, View,ImageBackground } from 'react-native';
-import { Header, ThemeConsumer } from 'react-native-elements';
+import {  Text, View } from 'react-native';
+import { Header } from 'react-native-elements';
 
 import PropTypes from 'prop-types';
 import styles from './styles';

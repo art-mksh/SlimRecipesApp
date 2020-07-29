@@ -49,6 +49,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
+    //backgroundColor:'white'
+  },
+  infoContainerText: {
+    marginTop:10,
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    //backgroundColor:'white',
+    //borderColor:'black',
+    //borderWidth:1,
   },
   buttonContainer: {
     flex: 1,
@@ -74,9 +85,13 @@ const styles = StyleSheet.create({
   },
   infoDescriptionRecipe: {
     textAlign: 'left',
-    fontSize: 16,
+    fontSize: 18,
     marginTop: 30,
-    margin: 15
+    margin: 15,
+    //fontWeight:10,
+    //fontWeight: 'bold',
+    fontFamily:'GUERRILLA-Normal',
+
   },
   infoRecipeName: {
     fontSize: 28,

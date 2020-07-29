@@ -245,8 +245,15 @@ export default class RecipeScreen extends React.Component {
                       button_color={(this.state.viewIngredientsButton)}
                     />
                   </View>
-                  <View style={styles.infoContainer}>
-                    <Text style={styles.infoDescriptionRecipe}>{item.description}</Text>
+                  <View style={styles.infoContainerText}>
+                    <Text 
+                    style={{          
+                      fontFamily:'GUERRILLA-Normal',
+                  }, styles.infoDescriptionRecipe}
+                    
+                  >
+                    {item.description}
+                  </Text>
                   </View>
                 </View>
               </View>

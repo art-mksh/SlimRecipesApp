@@ -48,26 +48,27 @@ const styles = StyleSheet.create({
   },
   categoriesPinkPrefixName: {
     flex: 1,
-    fontSize: 32,
+    fontSize: 35,
     //fontWeight: 'bold',
     textAlign: 'center',
     color: '#ff4ebd',
     marginTop: 5,
     textShadowColor: 'black',
-    textShadowOffset: { width: 1, height: 1 },
+    //textShadowOffset: { width: 1, height: 1 },
+    textShadowOffset: { width: 5, height: 0.5 },
     textShadowRadius: 1,
     fontFamily:'GUERRILLA-Normal'
   },
   categoriesBluePrefixName: {
     flex: 1,
-    fontSize: 32,
+    fontSize: 35,
     //fontWeight: 'bold',
     textAlign: 'center',
     color: '#0189d7',
     marginTop: 5,
     textShadowColor: 'black',
-    textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 1,
+    textShadowOffset: { width: 5, height: 0.5 },
+    textShadowRadius: 2,
     fontFamily:'GUERRILLA-Normal'
 
   },
