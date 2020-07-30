@@ -36,9 +36,6 @@ export default class RecipeScreen extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      activeSlide: 0
-    };
 
     const { navigation } = this.props;
     const currItem = navigation.getParam('item');
@@ -103,6 +100,7 @@ export default class RecipeScreen extends React.Component {
 
 
     this.state = {
+      activeSlide: 0,
       viewIngredientsButton: ViewIngredientsDefaultButtonColor,
       viewInstructionButton: ViewInstructionDefaultButtonColor,
       currentButtonStateColor : currentDefaultButtonColor
@@ -128,8 +126,10 @@ export default class RecipeScreen extends React.Component {
 
   render() {
 
+    console.log(this.state);
     const { activeSlide } = this.state;
     
+
     const { navigation } = this.props;
     const item = navigation.getParam('item');
     const category = getCategoryById(item.categoryId);
