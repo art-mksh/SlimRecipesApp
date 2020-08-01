@@ -11,8 +11,13 @@ export default class CustomHeader extends React.Component {
 
   constructor(props) {
     super(props);
-  
 
+    
+    this.state = {
+      value: '',
+      //data: []
+      data: ''
+    };
   }
 
   render() {
@@ -60,8 +65,19 @@ export default class CustomHeader extends React.Component {
 
     if(this.props.parent_navigation.state.routeName ==='Search'){
 
-      //console.log(this.props.CustomSearchBar);
+      //console.log(this.props.CustomSearchBar.props);
+      //console.log(typeof(this.props.CustomSearchBar.props.value));
+      //if(typeof(this.props.CustomSearchBar.props.value) === 'Array'){
+        //this.props.CustomSearchBar.props.value = '';
+      //}
+      //const testx = this.props.CustomSearchBar;
+      //testx.props.value = '';
+
+     
+
       CenterCustomComponent =  this.props.CustomSearchBar;
+      //console.log(typeof(CenterCustomComponent.props.value)+ ' center comp type');
+
     }else{
 
       let HeaderTitleName,CenterComponentTextColor;
